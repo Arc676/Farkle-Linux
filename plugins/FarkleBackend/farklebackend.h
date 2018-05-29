@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+#include "libfarkle.h"
+
 class FarkleBackend: public QObject {
     Q_OBJECT
 
