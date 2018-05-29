@@ -9,10 +9,9 @@ class FarkleBackend: public QObject {
     Q_OBJECT
 
 public:
-    FarkleBackend();
-    ~FarkleBackend() = default;
-
-    Q_INVOKABLE void speak();
+    Q_INVOKABLE void newRoll();
+    Q_INVOKABLE void confirmSelection();
+    Q_INVOKABLE void bankPoints();
 };
 
 #endif

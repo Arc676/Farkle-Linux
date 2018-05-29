@@ -2,10 +2,11 @@
 
 #include "farklebackend.h"
 
-FarkleBackend::FarkleBackend() {
-
+void FarkleBackend::newRoll() {
 }
 
-void FarkleBackend::speak() {
-    qDebug() << "hello world!";
+void FarkleBackend::confirmSelection() {
+}
+
+void FarkleBackend::bankPoints() {
 }

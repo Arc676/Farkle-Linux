@@ -20,11 +20,52 @@ MainView {
             title: i18n.tr('Farkle')
         }
 
-        Label {
-            anchors.centerIn: parent
-            text: i18n.tr('Hello World!')
+        Column {
+            id: dieColumn
+	    width: parent.width / 3
+	    anchors {
+	    	top: header.bottom
+		left: parent.left
+	    }
+        }
+
+        Column {
+            id: controlsColumn
+	    width: parent.width / 3
+	    anchors {
+	    	top: header.bottom
+		left: dieColumn.right
+	    }
+
+	    Button {
+	    	id: rollButton
+		width: parent.width
+		text: i18n.tr('Roll')
+		onClicked: FarkleBackend.newRoll()
+	    }
+
+	    Button {
+	    	id: selButton
+		width: parent.width
+		text: i18n.tr('Confirm selection')
+		onClicked: FarkleBackend.confirmSelection()
+	    }
+
+	    Button {
+	    	id: bankButton
+		width: parent.width
+		text: i18n.tr('Bank')
+		onClicked: FarkleBackend.bankPoints()
+	    }
+        }
+
+        Column {
+            id: leaderboardColumn
+	    width: parent.width / 3
+	    anchors {
+	    	top: header.bottom
+		left: controlsColumn.right
+	    }
         }
     }
-
-    Component.onCompleted: FarkleBackend.speak()
 }
