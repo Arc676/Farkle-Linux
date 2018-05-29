@@ -1,10 +1,10 @@
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(PLUGIN "PluginName")
+set(PLUGIN "FarkleBackend")
 
 set(
     SRC
     plugin.cpp
-    pluginname.cpp
+    farklebackend.cpp
 )
 
 set(CMAKE_AUTOMOC ON)

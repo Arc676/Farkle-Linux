@@ -1,9 +1,9 @@
-#ifndef PLUGINNAMEPLUGIN_H
-#define PLUGINNAMEPLUGIN_H
+#ifndef FARKLEBACKENDPLUGIN_H
+#define FARKLEBACKENDPLUGIN_H
 
 #include <QQmlExtensionPlugin>
 
-class PluginNamePlugin : public QQmlExtensionPlugin {
+class FarkleBackendPlugin : public QQmlExtensionPlugin {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
 

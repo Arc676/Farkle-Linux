@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
-import PluginName 1.0
+import FarkleBackend 1.0
 
 MainView {
     id: root
@@ -26,5 +26,5 @@ MainView {
         }
     }
 
-    Component.onCompleted: PluginName.speak()
+    Component.onCompleted: FarkleBackend.speak()
 }

@@ -1,1 +1,1 @@
-add_subdirectory(PluginName)
+add_subdirectory(FarkleBackend)
