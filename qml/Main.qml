@@ -57,6 +57,11 @@ MainView {
 		text: i18n.tr('Bank')
 		onClicked: FarkleBackend.bankPoints()
 	    }
+
+	    ListView {
+	    	id: selectionsTable
+		width: parent.width
+	    }
         }
 
         Column {
@@ -65,6 +70,11 @@ MainView {
 	    anchors {
 	    	top: header.bottom
 		left: controlsColumn.right
+	    }
+
+	    ListView {
+	    	id: leaderboardTable
+		width: parent.width
 	    }
         }
     }

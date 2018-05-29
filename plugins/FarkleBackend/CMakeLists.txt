@@ -5,6 +5,8 @@ set(
     SRC
     plugin.cpp
     farklebackend.cpp
+    selectionsmodel.cpp
+    leaderboardmodel.cpp
 )
 
 set(CMAKE_AUTOMOC ON)
