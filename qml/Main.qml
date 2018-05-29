@@ -41,7 +41,7 @@ MainView {
 	    	id: rollButton
 		width: parent.width
 		text: i18n.tr('Roll')
-		onClicked: FarkleBackend.newRoll()
+		onClicked: FarkleBackend.rollDice()
 	    }
 
 	    Button {
@@ -55,7 +55,7 @@ MainView {
 	    	id: bankButton
 		width: parent.width
 		text: i18n.tr('Bank')
-		onClicked: FarkleBackend.bankPoints()
+		onClicked: FarkleBackend.bank()
 	    }
 
 	    ListView {

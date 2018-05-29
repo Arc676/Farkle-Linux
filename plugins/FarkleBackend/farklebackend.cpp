@@ -18,7 +18,7 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 	initRoll(roll);
 }
 
-void FarkleBackend::newRoll() {
+void FarkleBackend::rollDice() {
 	newRoll(roll);
 }
 
@@ -26,10 +26,10 @@ void FarkleBackend::confirmSelection() {
 	Selection* sel = (Selection*)malloc(sizeof(Selection));
         if (constructSelection(roll, sel)) {
         } else {
-                deselectRoll(_roll);
+                deselectRoll(roll);
         }
 }
 
-void FarkleBackend::bankPoints() {
+void FarkleBackend::bank() {
 	bankPoints(players[currentPlayer]);
 }
