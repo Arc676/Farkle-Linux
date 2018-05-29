@@ -1,0 +1,15 @@
+{
+    "name": "farkle.arc676",
+    "description": "A Linux frontend to allow playing the Farkle dice game",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Farkle",
+    "hooks": {
+        "farkle": {
+            "apparmor": "farkle.apparmor",
+            "desktop":  "farkle.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>",
+    "framework" : "ubuntu-sdk-15.04.5"
+}
