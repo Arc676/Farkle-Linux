@@ -53,6 +53,19 @@ public:
 	 * Banks the user's selections from the turn
 	 */
 	Q_INVOKABLE void bank();
+
+	/**
+	 * Gets the value of a die
+	 * @param index Die index
+	 * @return Value of the relevant die
+	 */
+	Q_INVOKABLE int getValue(int index);
+signals:
+	/**
+	 * Indicates to the UI that the dice' states
+	 * have changed
+	 */
+	void updateState();
 };
 
 #endif

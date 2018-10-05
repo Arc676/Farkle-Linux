@@ -26,6 +26,17 @@ MainView {
 
 	width: units.gu(45)
 	height: units.gu(75)
+	property real margin: units.gu(2)
+
+	Connections {
+		target: FarkleBackend
+		onUpdateState: {
+			var dice = [die1, die2, die3, die4, die5, die6]
+			for (var i = 0; i < 6; i++) {
+				dice[i].source = "dice/" + FarkleBackend.getValue(i) + ".png"
+			}
+		}
+	}
 
 	Page {
 		anchors.fill: parent
@@ -35,60 +46,57 @@ MainView {
 			title: i18n.tr('Farkle')
 		}
 
-		Column {
-			id: dieColumn
-			width: parent.width / 3
+		Row {
+			id: dieRow
 			anchors {
 				top: header.bottom
+				topMargin: margin
 				left: parent.left
+				leftMargin: margin
+				right: parent.right
+				rightMargin: margin
 			}
 
-			Row {
-				id: dieRow
-				spacing: 10
+			spacing: (width - 6 * 32 - 2 * margin) / 5
 
-				Column {
-					id: leftDieColumn
-					spacing: 10
+			Image {
+				id: die1
+				source: "dice/1.png"
+			}
 
-					Image {
-						source: "dice/1.png"
-					}
+			Image {
+				id: die2
+				source: "dice/2.png"
+			}
 
-					Image {
-						source: "dice/2.png"
-					}
+			Image {
+				id: die3
+				source: "dice/3.png"
+			}
 
-					Image {
-						source: "dice/3.png"
-					}
-				}
+			Image {
+				id: die4
+				source: "dice/4.png"
+			}
 
-				Column {
-					id: rightDieColumn
-					spacing: 10
+			Image {
+				id: die5
+				source: "dice/5.png"
+			}
 
-					Image {
-						source: "dice/4.png"
-					}
-
-					Image {
-						source: "dice/5.png"
-					}
-
-					Image {
-						source: "dice/6.png"
-					}
-				}
+			Image {
+				id: die6
+				source: "dice/6.png"
 			}
 		}
 
 		Column {
-			id: controlsColumn
-			width: parent.width / 3
+			id: controlsRow
+			width: parent.width
+			spacing: margin
 			anchors {
-				top: header.bottom
-				left: dieColumn.right
+				top: dieRow.bottom
+				topMargin: margin
 			}
 
 			Button {
@@ -118,17 +126,17 @@ MainView {
 			}
 		}
 
-		Column {
+		Row {
 			id: leaderboardColumn
-			width: parent.width / 3
+			width: parent.width
 			anchors {
-				top: header.bottom
-				left: controlsColumn.right
+				top: controlsRow.bottom
+				topMargin: margin
 			}
 
 			ListView {
 				id: leaderboardTable
-				width: parent.width
+				anchors.fill: parent
 			}
 		}
 	}

@@ -48,3 +48,7 @@ void FarkleBackend::confirmSelection() {
 void FarkleBackend::bank() {
 	bankPoints(players[currentPlayer]);
 }
+
+int FarkleBackend::getValue(int index) {
+	return roll->dice[index].value;
+}
