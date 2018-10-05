@@ -27,6 +27,45 @@ MainView {
 	    	top: header.bottom
 		left: parent.left
 	    }
+
+	    Row {
+	    	id: dieRow
+		spacing: 10
+
+		Column {
+		    id: leftDieColumn
+		    spacing: 10
+
+		    Image {
+		    	source: "dice/1.png"
+		    }
+
+		    Image {
+		    	source: "dice/2.png"
+		    }
+
+		    Image {
+		    	source: "dice/3.png"
+		    }
+		}
+
+		Column {
+		    id: rightDieColumn
+		    spacing: 10
+
+		    Image {
+		    	source: "dice/4.png"
+		    }
+
+		    Image {
+		    	source: "dice/5.png"
+		    }
+
+		    Image {
+		    	source: "dice/6.png"
+		    }
+		}
+	    }
         }
 
         Column {
@@ -41,7 +80,7 @@ MainView {
 	    	id: rollButton
 		width: parent.width
 		text: i18n.tr('Roll')
-		onClicked: FarkleBackend.rollDice()
+		onClicked: FarkleBackend.startGame(1, 1)
 	    }
 
 	    Button {

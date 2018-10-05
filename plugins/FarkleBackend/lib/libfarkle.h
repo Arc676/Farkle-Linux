@@ -16,6 +16,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * Represents the current state of the game
  * i.e. the action that the current player
@@ -247,3 +251,7 @@ int bankPoints(Player* player);
  * player
  */
 void freePlayer(Player* player);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the farkle.arc676 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-29 12:53+0000\n"
+"POT-Creation-Date: 2018-10-05 06:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,14 +21,14 @@ msgstr ""
 msgid "Farkle"
 msgstr ""
 
-#: ../qml/Main.qml:43
+#: ../qml/Main.qml:82
 msgid "Roll"
 msgstr ""
 
-#: ../qml/Main.qml:50
+#: ../qml/Main.qml:89
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/Main.qml:57
+#: ../qml/Main.qml:96
 msgid "Bank"
 msgstr ""
