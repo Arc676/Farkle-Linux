@@ -26,7 +26,7 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-set(QT_IMPORTS_DIR "/plugins/FarkleBackend/lib/${ARCH_TRIPLET}")
+set(QT_IMPORTS_DIR "/lib/${ARCH_TRIPLET}")
 
 install(TARGETS ${PLUGIN} DESTINATION ${QT_IMPORTS_DIR}/${PLUGIN}/)
 install(FILES qmldir DESTINATION ${QT_IMPORTS_DIR}/${PLUGIN}/)
