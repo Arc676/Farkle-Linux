@@ -19,6 +19,6 @@
 #include "plugin.h"
 
 void FarkleBackendPlugin::registerTypes(const char *uri) {
-    //@uri FarkleBackend
-    qmlRegisterSingletonType<FarkleBackend>(uri, 1, 0, "FarkleBackend", [](QQmlEngine*, QJSEngine*) -> QObject* { return new FarkleBackend; });
+	//@uri FarkleBackend
+	qmlRegisterSingletonType<FarkleBackend>(uri, 1, 0, "FarkleBackend", [](QQmlEngine*, QJSEngine*) -> QObject* { return new FarkleBackend; });
 }

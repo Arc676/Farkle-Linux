@@ -21,38 +21,38 @@
 #include "libfarkle.h"
 
 class FarkleBackend: public QObject {
-    Q_OBJECT
+	Q_OBJECT
 
-    GameState state;
-    Roll* roll = nullptr;
-    Player** players = nullptr;
-    int turn = 0;
-    int turns = 0;
-    int pCount = 0;
-    int currentPlayer = 0;
+	GameState state;
+	Roll* roll = nullptr;
+	Player** players = nullptr;
+	int turn = 0;
+	int turns = 0;
+	int pCount = 0;
+	int currentPlayer = 0;
 
 public:
-    /**
-     * Starts the game
-     * @param pCount Number of players
-     * @param turnLimit Maximum number of turns players can take before the game ends
-     */
-    Q_INVOKABLE void startGame(int pCount, int turnLimit);
+	/**
+	 * Starts the game
+	 * @param pCount Number of players
+	 * @param turnLimit Maximum number of turns players can take before the game ends
+	 */
+	Q_INVOKABLE void startGame(int pCount, int turnLimit);
 
-    /**
-     * Rolls the die pool
-     */
-    Q_INVOKABLE void rollDice();
+	/**
+	 * Rolls the die pool
+	 */
+	Q_INVOKABLE void rollDice();
 
-    /**
-     * Stores the user's die selection
-     */
-    Q_INVOKABLE void confirmSelection();
+	/**
+	 * Stores the user's die selection
+	 */
+	Q_INVOKABLE void confirmSelection();
 
-    /**
-     * Banks the user's selections from the turn
-     */
-    Q_INVOKABLE void bank();
+	/**
+	 * Banks the user's selections from the turn
+	 */
+	Q_INVOKABLE void bank();
 };
 
 #endif

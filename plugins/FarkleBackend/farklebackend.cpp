@@ -39,10 +39,10 @@ void FarkleBackend::rollDice() {
 
 void FarkleBackend::confirmSelection() {
 	Selection* sel = (Selection*)malloc(sizeof(Selection));
-        if (constructSelection(roll, sel)) {
-        } else {
-                deselectRoll(roll);
-        }
+	if (constructSelection(roll, sel)) {
+	} else {
+		deselectRoll(roll);
+	}
 }
 
 void FarkleBackend::bank() {
