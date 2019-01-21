@@ -30,10 +30,12 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 	this->pCount = pCount;
 	players = (Player**)malloc(pCount * sizeof(Player*));
 	initRoll(roll);
+	gameInProgress = true;
 }
 
 void FarkleBackend::rollDice() {
 	newRoll(roll);
+	emit updateState();
 }
 
 void FarkleBackend::confirmSelection() {
@@ -50,4 +52,8 @@ void FarkleBackend::bank() {
 
 int FarkleBackend::getValue(int index) {
 	return roll->dice[index].value;
+}
+
+void FarkleBackend::toggle(int index) {
+	toggleDie(roll, index);
 }

@@ -61,31 +61,55 @@ MainView {
 			Image {
 				id: die1
 				source: "dice/1.png"
+				MouseArea {
+					anchors.fill: parent
+					onClicked: FarkleBackend.toggle(0)
+				}
 			}
 
 			Image {
 				id: die2
 				source: "dice/2.png"
+				MouseArea {
+					anchors.fill: parent
+					onClicked: FarkleBackend.toggle(1)
+				}
 			}
 
 			Image {
 				id: die3
 				source: "dice/3.png"
+				MouseArea {
+					anchors.fill: parent
+					onClicked: FarkleBackend.toggle(2)
+				}
 			}
 
 			Image {
 				id: die4
 				source: "dice/4.png"
+				MouseArea {
+					anchors.fill: parent
+					onClicked: FarkleBackend.toggle(3)
+				}
 			}
 
 			Image {
 				id: die5
 				source: "dice/5.png"
+				MouseArea {
+					anchors.fill: parent
+					onClicked: FarkleBackend.toggle(4)
+				}
 			}
 
 			Image {
 				id: die6
 				source: "dice/6.png"
+				MouseArea {
+					anchors.fill: parent
+					onClicked: FarkleBackend.toggle(5)
+				}
 			}
 		}
 
@@ -102,7 +126,13 @@ MainView {
 				id: rollButton
 				width: parent.width
 				text: i18n.tr('Roll')
-				onClicked: FarkleBackend.startGame(1, 1)
+				onClicked: {
+					if (FarkleBackend.gameInProgress) {
+						FarkleBackend.rollDice();
+					} else {
+						FarkleBackend.startGame(1, 1)
+					}
+				}
 			}
 
 			Button {

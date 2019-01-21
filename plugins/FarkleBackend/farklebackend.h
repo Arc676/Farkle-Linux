@@ -30,7 +30,11 @@ class FarkleBackend: public QObject {
 	int pCount = 0;
 	int currentPlayer = 0;
 
+	bool gameInProgress;
+
 public:
+	Q_PROPERTY(bool gameInProgress MEMBER gameInProgress);
+
 	/**
 	 * Starts the game
 	 * @param pCount Number of players
@@ -59,6 +63,12 @@ public:
 	 * @return Value of the relevant die
 	 */
 	Q_INVOKABLE int getValue(int index);
+
+	/**
+	 * Toggles the selection state of a die
+	 * @param index Die index
+	 */
+	Q_INVOKABLE void toggle(int index);
 signals:
 	/**
 	 * Indicates to the UI that the dice' states
