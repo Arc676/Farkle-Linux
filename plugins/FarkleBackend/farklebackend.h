@@ -15,6 +15,10 @@
 #ifndef FARKLEBACKEND_H
 #define FARKLEBACKEND_H
 
+#define ROLL_BUTTON 0
+#define SELECT_BUTTON 1
+#define BANK_BUTTON 2
+
 #include <QObject>
 
 #include "libfarkle.h"
@@ -25,10 +29,12 @@ class FarkleBackend: public QObject {
 	GameState state;
 	Roll* roll = nullptr;
 	Player** players = nullptr;
+	Player** leaderboard = nullptr;
 	int turn = 0;
 	int turns = 0;
 	int pCount = 0;
 	int currentPlayer = 0;
+	int accumulatedPoints = 0;
 
 	bool gameInProgress;
 
@@ -69,12 +75,24 @@ public:
 	 * @param index Die index
 	 */
 	Q_INVOKABLE void toggle(int index);
+
+	Q_INVOKABLE bool buttonEnabled(int button);
+
+	void setupNextTurn();
+
+	void endTurn();
+
+	void enterState(GameState state);
+
+	void updateSelectionValue(Selection* sel);
 signals:
 	/**
 	 * Indicates to the UI that the dice' states
 	 * have changed
 	 */
 	void updateState();
+
+	void updateButtons();
 };
 
 #endif

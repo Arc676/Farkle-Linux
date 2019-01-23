@@ -35,6 +35,12 @@ MainView {
 				dice[i].source = "dice/" + FarkleBackend.getValue(i) + ".png"
 			}
 		}
+
+		onUpdateButtons: {
+			rollButton.enabled = FarkleBackend.buttonEnabled(0);
+			selButton.enabled = FarkleBackend.buttonEnabled(1);
+			bankButton.enabled = FarkleBackend.buttonEnabled(2);
+		}
 	}
 
 	Page {
