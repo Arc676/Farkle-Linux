@@ -12,28 +12,13 @@
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#include "playerwrapper.h"
+#include "model.h"
 
-void PlayerWrapper::setPlayer(Player* player) {
-	this->player = player;
+int TwoColumnTableModel::columnCount(const QModelIndex &parent) const {
+	return 2;
 }
 
-Player* PlayerWrapper::getPlayer() {
-	return player;
-}
-
-void PlayerWrapper::setLeaderboard(Player** leaderboard) {
-	this->leaderboard = leaderboard;
-}
-
-Player** PlayerWrapper::getLeaderboard() {
-	return leaderboard;
-}
-
-void PlayerWrapper::setPlayerCount(int count) {
-	playerCount = count;
-}
-
-int PlayerWrapper::getPlayerCount() {
-	return playerCount;
+void TwoColumnTableModel::emitReset() {
+	beginResetModel();
+	endResetModel();
 }

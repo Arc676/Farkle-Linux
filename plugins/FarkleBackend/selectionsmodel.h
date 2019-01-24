@@ -15,13 +15,12 @@
 #ifndef SELECTIONSMODEL_H
 #define SELECTIONSMODEL_H
 
-#include <QAbstractTableModel>
 #include <QString>
 
+#include "model.h"
 #include "libfarkle.h"
-#include "playerwrapper.h"
 
-class SelectionsModel: public QAbstractTableModel {
+class SelectionsModel: public TwoColumnTableModel {
 	Q_OBJECT
 
 	Player* player = nullptr;
@@ -33,14 +32,11 @@ class SelectionsModel: public QAbstractTableModel {
 
 public:
 	int rowCount(const QModelIndex &parent = QModelIndex()) const;
-	int columnCount(const QModelIndex &parent) const;
 	QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
 	QHash<int, QByteArray> roleNames() const;
 
 	Q_INVOKABLE void loadPlayer(PlayerWrapper* wrapper);
-
-	Q_INVOKABLE void emitReset();
 };
 
 #endif

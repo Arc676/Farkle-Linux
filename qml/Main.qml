@@ -46,6 +46,7 @@ MainView {
 
 		onNextPlayer: {
 			selectionsTable.model.loadPlayer(FarkleBackend.getCurrentPlayer())
+			leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
 		}
 	}
 
@@ -126,7 +127,7 @@ MainView {
 		}
 
 		Column {
-			id: controlsRow
+			id: controlsCol
 			width: parent.width
 			spacing: margin
 			anchors {
@@ -138,6 +139,12 @@ MainView {
 				id: rollButton
 				width: parent.width
 				text: i18n.tr('Roll')
+				anchors {
+					left: parent.left
+					right: parent.right
+					leftMargin: margin
+					rightMargin: margin
+				}
 				onClicked: {
 					if (FarkleBackend.gameInProgress) {
 						FarkleBackend.rollDice();
@@ -151,6 +158,12 @@ MainView {
 				id: selButton
 				width: parent.width
 				text: i18n.tr('Confirm selection')
+				anchors {
+					left: parent.left
+					right: parent.right
+					leftMargin: margin
+					rightMargin: margin
+				}
 				onClicked: FarkleBackend.confirmSelection()
 			}
 
@@ -158,6 +171,12 @@ MainView {
 				id: bankButton
 				width: parent.width
 				text: i18n.tr('Bank')
+				anchors {
+					left: parent.left
+					right: parent.right
+					leftMargin: margin
+					rightMargin: margin
+				}
 				onClicked: FarkleBackend.bank()
 			}
 
@@ -165,20 +184,31 @@ MainView {
 				id: selectionsLabel
 				width: parent.width
 				text: i18n.tr('Selections')
+				anchors {
+					left: parent.left
+					right: parent.right
+					leftMargin: margin
+				}
 			}
 
 			ListView {
 				id: selectionsTable
 				width: parent.width
-				height: units.gu(30)
+				height: units.gu(15)
 				model: SelectionsModel {}
-				delegate: Row {
+				delegate: Rectangle {
 					width: parent.width
+					height: selText.height
 					Text {
+						id: selText
 						text: selection
+						anchors.left: parent.left
+						anchors.leftMargin: margin * 2
 					}
 					Text {
 						text: value
+						anchors.right: parent.right
+						anchors.rightMargin: margin * 2
 					}
 				}
 			}
@@ -187,22 +217,34 @@ MainView {
 				id: leaderboardLabel
 				width: parent.width
 				text: i18n.tr('Leaderboard')
+				anchors {
+					left: parent.left
+					right: parent.right
+					leftMargin: margin
+				}
 			}
 
-			/*ListView {
+			ListView {
 				id: leaderboardTable
 				width: parent.width
-				model: 0 //LeaderboardModel {}
-				delegate: Row {
+				height: units.gu(15)
+				model: LeaderboardModel {}
+				delegate: Rectangle {
 					width: parent.width
+					height: pNameText.height
 					Text {
+						id: pNameText
 						text: playerName
+						anchors.left: parent.left
+						anchors.leftMargin: margin * 2
 					}
 					Text {
 						text: score
+						anchors.right: parent.right
+						anchors.rightMargin: margin * 2
 					}
 				}
-			}*/
+			}
 		}
 	}
 }

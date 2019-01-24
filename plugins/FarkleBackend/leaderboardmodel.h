@@ -15,17 +15,28 @@
 #ifndef LEADERBOARDMODEL_H
 #define LEADERBOARDMODEL_H
 
-#include <QAbstractTableModel>
+#include <QString>
 
-class LeaderboardModel: public QAbstractTableModel {
+#include "model.h"
+#include "libfarkle.h"
+
+class LeaderboardModel: public TwoColumnTableModel {
 	Q_OBJECT
 
+	int pCount = 0;
+	Player** leaderboard = nullptr;
+
+	enum {
+		PlayerCol = Qt::UserRole,
+		ScoreCol
+	};
 public:
-	QModelIndex parent(const QModelIndex &index) const;
-	QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
 	int rowCount(const QModelIndex &parent = QModelIndex()) const ;
-	int columnCount(const QModelIndex &parent = QModelIndex()) const;
 	QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+
+	QHash<int, QByteArray> roleNames() const;
+
+	Q_INVOKABLE void loadLeaderboard(PlayerWrapper* wrapper);
 };
 
 #endif

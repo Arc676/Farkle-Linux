@@ -80,6 +80,8 @@ public:
 
 	Q_INVOKABLE PlayerWrapper* getCurrentPlayer();
 
+	Q_INVOKABLE PlayerWrapper* getLeaderboard();
+
 	void setupNextTurn();
 
 	void endTurn();

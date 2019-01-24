@@ -6,6 +6,7 @@ set(
     SRC
     plugin.cpp
     farklebackend.cpp
+    model.cpp
     selectionsmodel.cpp
     leaderboardmodel.cpp
     playerwrapper.cpp

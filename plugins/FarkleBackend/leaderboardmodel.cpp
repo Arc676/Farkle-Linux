@@ -14,17 +14,35 @@
 
 #include "leaderboardmodel.h"
 
-QModelIndex LeaderboardModel::parent(const QModelIndex &index) const {
-}
-
-QModelIndex LeaderboardModel::index(int row, int column, const QModelIndex &parent) const {
-}
-
 int LeaderboardModel::rowCount(const QModelIndex &parent) const {
-}
-
-int LeaderboardModel::columnCount(const QModelIndex &parent) const {
+	return pCount;
 }
 
 QVariant LeaderboardModel::data(const QModelIndex &index, int role) const {
+	if (!leaderboard) {
+		return QVariant();
+	}
+	int row = index.row();
+	Player* player = leaderboard[row];
+	switch (role) {
+		case PlayerCol:
+			return QVariant(QString(player->name));
+		case ScoreCol:
+			return QVariant(QString("%1").arg(player->score));
+	}
+	return QVariant();
+}
+
+QHash<int, QByteArray> LeaderboardModel::roleNames() const {
+	QHash<int, QByteArray> names;
+	names[PlayerCol] = "playerName";
+	names[ScoreCol] = "score";
+	return names;
+}
+
+void LeaderboardModel::loadLeaderboard(PlayerWrapper* wrapper) {
+	leaderboard = wrapper->getLeaderboard();
+	pCount = wrapper->getPlayerCount();
+	delete wrapper;
+	emitReset();
 }

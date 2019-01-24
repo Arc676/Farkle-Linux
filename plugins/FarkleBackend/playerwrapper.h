@@ -22,9 +22,18 @@ class PlayerWrapper : public QObject {
 	Q_OBJECT
 
 	Player* player;
+
+	int playerCount;
+	Player** leaderboard;
 public:
 	void setPlayer(Player* player);
 	Player* getPlayer();
+
+	void setLeaderboard(Player** leaderboard);
+	Player** getLeaderboard();
+
+	void setPlayerCount(int count);
+	int getPlayerCount();
 };
 
 #endif

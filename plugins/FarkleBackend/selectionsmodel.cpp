@@ -21,10 +21,6 @@ int SelectionsModel::rowCount(const QModelIndex &parent) const {
 	return 0;
 }
 
-int SelectionsModel::columnCount(const QModelIndex &parent) const {
-	return 2;
-}
-
 QVariant SelectionsModel::data(const QModelIndex &index, int role) const {
 	if (!player) {
 		return QVariant();
@@ -59,9 +55,5 @@ QHash<int, QByteArray> SelectionsModel::roleNames() const {
 void SelectionsModel::loadPlayer(PlayerWrapper* wrapper) {
 	player = wrapper->getPlayer();
 	delete wrapper;
-}
-
-void SelectionsModel::emitReset() {
-	beginResetModel();
-	endResetModel();
+	emitReset();
 }

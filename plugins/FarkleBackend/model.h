@@ -12,28 +12,18 @@
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#ifndef TWOCOLTABLEMODEL_H
+#define TWOCOLTABLEMODEL_H
+
+#include <QAbstractTableModel>
 #include "playerwrapper.h"
 
-void PlayerWrapper::setPlayer(Player* player) {
-	this->player = player;
-}
+class TwoColumnTableModel: public QAbstractTableModel {
+	Q_OBJECT
+public:
+	int columnCount(const QModelIndex &parent) const;
 
-Player* PlayerWrapper::getPlayer() {
-	return player;
-}
+	Q_INVOKABLE void emitReset();
+};
 
-void PlayerWrapper::setLeaderboard(Player** leaderboard) {
-	this->leaderboard = leaderboard;
-}
-
-Player** PlayerWrapper::getLeaderboard() {
-	return leaderboard;
-}
-
-void PlayerWrapper::setPlayerCount(int count) {
-	playerCount = count;
-}
-
-int PlayerWrapper::getPlayerCount() {
-	return playerCount;
-}
+#endif

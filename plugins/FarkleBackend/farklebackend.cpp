@@ -144,3 +144,10 @@ PlayerWrapper* FarkleBackend::getCurrentPlayer() {
 	wrapper->setPlayer(players[currentPlayer]);
 	return wrapper;
 }
+
+PlayerWrapper* FarkleBackend::getLeaderboard() {
+	PlayerWrapper* wrapper = new PlayerWrapper();
+	wrapper->setLeaderboard(leaderboard);
+	wrapper->setPlayerCount(pCount);
+	return wrapper;
+}
