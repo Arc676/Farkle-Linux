@@ -47,6 +47,7 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 	}
 	gameInProgress = true;
 	enterState(FIRST_ROLL);
+	emit nextPlayer();
 }
 
 void FarkleBackend::rollDice() {
@@ -112,11 +113,13 @@ void FarkleBackend::setupNextTurn() {
 	accumulatedPoints = 0;
 	initRoll(roll);
 	sortPlayers(leaderboard, pCount);
+	emit nextPlayer();
 }
 
 void FarkleBackend::updateSelectionValue(Selection* sel) {
 	accumulatedPoints += sel->value;
 	appendSelection(players[currentPlayer], sel);
+	emit updateSelection();
 }
 
 void FarkleBackend::enterState(GameState state) {
@@ -134,4 +137,10 @@ bool FarkleBackend::buttonEnabled(int button) {
 		return state == ROLLING;
 	}
 	return false;
+}
+
+PlayerWrapper* FarkleBackend::getCurrentPlayer() {
+	PlayerWrapper* wrapper = new PlayerWrapper();
+	wrapper->setPlayer(players[currentPlayer]);
+	return wrapper;
 }

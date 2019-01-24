@@ -16,16 +16,31 @@
 #define SELECTIONSMODEL_H
 
 #include <QAbstractTableModel>
+#include <QString>
+
+#include "libfarkle.h"
+#include "playerwrapper.h"
 
 class SelectionsModel: public QAbstractTableModel {
 	Q_OBJECT
 
+	Player* player = nullptr;
+
+	enum {
+		SelectionCol = Qt::UserRole,
+		ValueCol
+	};
+
 public:
-	QModelIndex parent(const QModelIndex &index) const;
-	QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
-	int rowCount(const QModelIndex &parent = QModelIndex()) const ;
-	int columnCount(const QModelIndex &parent = QModelIndex()) const;
+	int rowCount(const QModelIndex &parent = QModelIndex()) const;
+	int columnCount(const QModelIndex &parent) const;
 	QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+
+	QHash<int, QByteArray> roleNames() const;
+
+	Q_INVOKABLE void loadPlayer(PlayerWrapper* wrapper);
+
+	Q_INVOKABLE void emitReset();
 };
 
 #endif

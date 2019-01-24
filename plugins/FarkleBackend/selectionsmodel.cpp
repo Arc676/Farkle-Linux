@@ -14,17 +14,54 @@
 
 #include "selectionsmodel.h"
 
-QModelIndex SelectionsModel::parent(const QModelIndex &index) const {
-}
-
-QModelIndex SelectionsModel::index(int row, int column, const QModelIndex &parent) const {
-}
-
 int SelectionsModel::rowCount(const QModelIndex &parent) const {
+	if (player) {
+		return player->hand->timesSelected;
+	}
+	return 0;
 }
 
 int SelectionsModel::columnCount(const QModelIndex &parent) const {
+	return 2;
 }
 
 QVariant SelectionsModel::data(const QModelIndex &index, int role) const {
+	if (!player) {
+		return QVariant();
+	}
+	int row = index.row();
+	Selection* sel = player->hand->selections[row];
+	if (!sel) {
+		return QVariant();
+	}
+	switch (role) {
+		case SelectionCol:
+		{
+			QString text = "";
+			for (int i = 0; i < sel->dieCount; i++) {
+				text.append(QString("%1 ").arg(sel->values[i]));
+			}
+			return QVariant(text);
+		}
+		case ValueCol:
+			return QVariant(QString("%1").arg(sel->value));
+	}
+	return QVariant();
+}
+
+QHash<int, QByteArray> SelectionsModel::roleNames() const {
+	QHash<int, QByteArray> names;
+	names[SelectionCol] = "selection";
+	names[ValueCol] = "value";
+	return names;
+}
+
+void SelectionsModel::loadPlayer(PlayerWrapper* wrapper) {
+	player = wrapper->getPlayer();
+	delete wrapper;
+}
+
+void SelectionsModel::emitReset() {
+	beginResetModel();
+	endResetModel();
 }

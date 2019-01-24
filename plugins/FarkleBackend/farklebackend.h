@@ -22,6 +22,7 @@
 #include <QObject>
 
 #include "libfarkle.h"
+#include "playerwrapper.h"
 
 class FarkleBackend: public QObject {
 	Q_OBJECT
@@ -37,7 +38,6 @@ class FarkleBackend: public QObject {
 	int accumulatedPoints = 0;
 
 	bool gameInProgress;
-
 public:
 	Q_PROPERTY(bool gameInProgress MEMBER gameInProgress);
 
@@ -78,6 +78,8 @@ public:
 
 	Q_INVOKABLE bool buttonEnabled(int button);
 
+	Q_INVOKABLE PlayerWrapper* getCurrentPlayer();
+
 	void setupNextTurn();
 
 	void endTurn();
@@ -92,7 +94,11 @@ signals:
 	 */
 	void updateState();
 
+	void updateSelection();
+
 	void updateButtons();
+
+	void nextPlayer();
 };
 
 #endif

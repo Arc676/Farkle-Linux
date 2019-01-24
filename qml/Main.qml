@@ -36,10 +36,16 @@ MainView {
 			}
 		}
 
+		onUpdateSelection: selectionsTable.model.emitReset()
+
 		onUpdateButtons: {
-			rollButton.enabled = FarkleBackend.buttonEnabled(0);
-			selButton.enabled = FarkleBackend.buttonEnabled(1);
-			bankButton.enabled = FarkleBackend.buttonEnabled(2);
+			rollButton.enabled = FarkleBackend.buttonEnabled(0)
+			selButton.enabled = FarkleBackend.buttonEnabled(1)
+			bankButton.enabled = FarkleBackend.buttonEnabled(2)
+		}
+
+		onNextPlayer: {
+			selectionsTable.model.loadPlayer(FarkleBackend.getCurrentPlayer())
 		}
 	}
 
@@ -155,24 +161,48 @@ MainView {
 				onClicked: FarkleBackend.bank()
 			}
 
+			Label {
+				id: selectionsLabel
+				width: parent.width
+				text: i18n.tr('Selections')
+			}
+
 			ListView {
 				id: selectionsTable
 				width: parent.width
+				height: units.gu(30)
+				model: SelectionsModel {}
+				delegate: Row {
+					width: parent.width
+					Text {
+						text: selection
+					}
+					Text {
+						text: value
+					}
+				}
 			}
-		}
 
-		Row {
-			id: leaderboardColumn
-			width: parent.width
-			anchors {
-				top: controlsRow.bottom
-				topMargin: margin
+			Label {
+				id: leaderboardLabel
+				width: parent.width
+				text: i18n.tr('Leaderboard')
 			}
 
-			ListView {
+			/*ListView {
 				id: leaderboardTable
-				anchors.fill: parent
-			}
+				width: parent.width
+				model: 0 //LeaderboardModel {}
+				delegate: Row {
+					width: parent.width
+					Text {
+						text: playerName
+					}
+					Text {
+						text: score
+					}
+				}
+			}*/
 		}
 	}
 }
