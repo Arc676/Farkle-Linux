@@ -18,6 +18,9 @@
 #include "plugin.h"
 
 void FarkleBackendPlugin::registerTypes(const char *uri) {
-	//@uri FarkleBackend
 	qmlRegisterSingletonType<FarkleBackend>(uri, 1, 0, "FarkleBackend", [](QQmlEngine*, QJSEngine*) -> QObject* { return new FarkleBackend; });
+	qmlRegisterType<SelectionsModel>(uri, 1, 0, "SelectionsModel");
+	qmlRegisterType<LeaderboardModel>(uri, 1, 0, "LeaderboardModel");
+	qmlRegisterType<PlayerWrapper>(uri, 1, 0, "PlayerWrapper");
+	srand(time(NULL));
 }

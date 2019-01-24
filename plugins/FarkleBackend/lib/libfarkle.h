@@ -1,4 +1,4 @@
-//Copyright (C) 2018 Arc676/Alessandro Vinciguerra
+//Copyright (C) 2018-9 Arc676/Alessandro Vinciguerra
 
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -12,6 +12,9 @@
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
+
+#ifndef LIBFARKLE_H
+#define LIBFARKLE_H
 
 #include <stdlib.h>
 #include <string.h>
@@ -254,4 +257,6 @@ void freePlayer(Player* player);
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif

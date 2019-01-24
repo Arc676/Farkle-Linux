@@ -8,6 +8,7 @@ set(
     farklebackend.cpp
     selectionsmodel.cpp
     leaderboardmodel.cpp
+    playerwrapper.cpp
 )
 
 set(CMAKE_AUTOMOC ON)
