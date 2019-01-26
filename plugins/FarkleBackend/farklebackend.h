@@ -34,9 +34,11 @@ class FarkleBackend: public QObject {
 	int currentPlayer = 0;
 	int accumulatedPoints = 0;
 
-	bool gameInProgress;
+	bool gameInProgress = false;
+	bool hasFarkled = false;
 public:
 	Q_PROPERTY(bool gameInProgress MEMBER gameInProgress);
+	Q_PROPERTY(bool hasFarkled MEMBER hasFarkled);
 
 	enum ButtonType : int {
 		ROLL_BUTTON,
@@ -98,7 +100,7 @@ public:
 
 	void setupNextTurn();
 
-	void endTurn();
+	Q_INVOKABLE void endTurn();
 
 	void enterState(GameState state);
 

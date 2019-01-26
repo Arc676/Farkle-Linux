@@ -27,6 +27,16 @@ MainView {
 	height: units.gu(75)
 	property real margin: units.gu(2)
 
+	function dieTapped(index) {
+		var dice = [die1, die2, die3, die4, die5, die6]
+		if (FarkleBackend.hasFarkled) {
+			FarkleBackend.endTurn()
+		} else {
+			FarkleBackend.toggle(index)
+			updateDie(dice[index], index)
+		}
+	}
+
 	function updateDie(die, index) {
 		die.parent.color = "#ffffff"
 		die.source = "dice/" + FarkleBackend.getValue(index) + ".png"
@@ -101,10 +111,7 @@ MainView {
 					anchors.centerIn: parent
 					MouseArea {
 						anchors.fill: parent
-						onClicked: {
-							FarkleBackend.toggle(0)
-							updateDie(die1, 0)
-						}
+						onClicked: dieTapped(0)
 					}
 				}
 			}
@@ -118,10 +125,7 @@ MainView {
 					anchors.centerIn: parent
 					MouseArea {
 						anchors.fill: parent
-						onClicked: {
-							FarkleBackend.toggle(1)
-							updateDie(die2, 1)
-						}
+						onClicked: dieTapped(1)
 					}
 				}
 			}
@@ -135,10 +139,7 @@ MainView {
 					anchors.centerIn: parent
 					MouseArea {
 						anchors.fill: parent
-						onClicked: {
-							FarkleBackend.toggle(2)
-							updateDie(die3, 2)
-						}
+						onClicked: dieTapped(2)
 					}
 				}
 			}
@@ -152,10 +153,7 @@ MainView {
 					anchors.centerIn: parent
 					MouseArea {
 						anchors.fill: parent
-						onClicked: {
-							FarkleBackend.toggle(3)
-							updateDie(die4, 3)
-						}
+						onClicked: dieTapped(3)
 					}
 				}
 			}
@@ -169,10 +167,7 @@ MainView {
 					anchors.centerIn: parent
 					MouseArea {
 						anchors.fill: parent
-						onClicked: {
-							FarkleBackend.toggle(4)
-							updateDie(die5, 4)
-						}
+						onClicked: dieTapped(4)
 					}
 				}
 			}
@@ -186,10 +181,7 @@ MainView {
 					anchors.centerIn: parent
 					MouseArea {
 						anchors.fill: parent
-						onClicked: {
-							FarkleBackend.toggle(5)
-							updateDie(die6, 5)
-						}
+						onClicked: dieTapped(5)
 					}
 				}
 			}
@@ -218,7 +210,7 @@ MainView {
 					if (FarkleBackend.gameInProgress) {
 						FarkleBackend.rollDice();
 					} else {
-						FarkleBackend.startGame(1, 1)
+						FarkleBackend.startGame(1, 10)
 					}
 				}
 			}

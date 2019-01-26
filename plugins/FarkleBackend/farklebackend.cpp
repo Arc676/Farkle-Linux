@@ -32,7 +32,7 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 	this->pCount = pCount;
 
 	accumulatedPoints = 0;
-	turn = 0;
+	turn = 1;
 
 	roll = (Roll*)malloc(sizeof(Roll));
 	initRoll(roll);
@@ -41,7 +41,7 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 	leaderboard = (Player**)malloc(pCount * sizeof(Player*));
 	for (int i = 0; i < pCount; i++) {
 		char* name = (char*)malloc(10);
-		sprintf(name, "Player %d", i);
+		sprintf(name, "Player %d", i + 1);
 		players[i] = createPlayer(name);
 		leaderboard[i] = players[i];
 	}
@@ -54,6 +54,7 @@ void FarkleBackend::rollDice() {
 	newRoll(roll);
 	Selection* sel = (Selection*)malloc(sizeof(Selection));
 	RollType type = determineRollType(roll, sel);
+	hasFarkled = type == FARKLE;
 	switch (type) {
 	case FARKLE:
 		emptyHand(players[currentPlayer]);
@@ -114,6 +115,7 @@ void FarkleBackend::toggle(int index) {
 void FarkleBackend::setupNextTurn() {
 	currentPlayer = (currentPlayer + 1) % pCount;
 	accumulatedPoints = 0;
+	hasFarkled = false;
 	initRoll(roll);
 	sortPlayers(leaderboard, pCount);
 	emit nextPlayer();
