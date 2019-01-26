@@ -68,6 +68,9 @@ void FarkleBackend::rollDice() {
 		enterState(PICKING);
 		break;
 	}
+	int values[6];
+	countDiceValues(roll, values);
+	determinePickableDice(roll, values, pickable);
 	emit updateState();
 }
 
@@ -127,7 +130,7 @@ void FarkleBackend::enterState(GameState state) {
 	emit updateButtons();
 }
 
-bool FarkleBackend::buttonEnabled(int button) {
+bool FarkleBackend::buttonEnabled(ButtonType button) {
 	switch (button) {
 	case ROLL_BUTTON:
 		return state & ROLLING;
@@ -137,6 +140,20 @@ bool FarkleBackend::buttonEnabled(int button) {
 		return state == ROLLING;
 	}
 	return false;
+}
+
+FarkleBackend::DieRender FarkleBackend::dieState(int index) {
+	Die die = roll->dice[index];
+	if (die.pickedThisRoll) {
+		return JUST_PICKED;
+	}
+	if (die.picked) {
+		return UNAVAILABLE;
+	}
+	if (!pickable[index]) {
+		return UNPICKABLE;
+	}
+	return PICKABLE;
 }
 
 PlayerWrapper* FarkleBackend::getCurrentPlayer() {

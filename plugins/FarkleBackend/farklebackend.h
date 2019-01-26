@@ -15,10 +15,6 @@
 #ifndef FARKLEBACKEND_H
 #define FARKLEBACKEND_H
 
-#define ROLL_BUTTON 0
-#define SELECT_BUTTON 1
-#define BANK_BUTTON 2
-
 #include <QObject>
 
 #include "libfarkle.h"
@@ -29,6 +25,7 @@ class FarkleBackend: public QObject {
 
 	GameState state;
 	Roll* roll = nullptr;
+	int pickable[6] = {0, 0, 0, 0, 0, 0};
 	Player** players = nullptr;
 	Player** leaderboard = nullptr;
 	int turn = 0;
@@ -40,6 +37,21 @@ class FarkleBackend: public QObject {
 	bool gameInProgress;
 public:
 	Q_PROPERTY(bool gameInProgress MEMBER gameInProgress);
+
+	enum ButtonType : int {
+		ROLL_BUTTON,
+		SELECT_BUTTON,
+		BANK_BUTTON
+	};
+	Q_ENUMS(ButtonType)
+
+	enum DieRender : int {
+		UNAVAILABLE,
+		JUST_PICKED,
+		UNPICKABLE,
+		PICKABLE
+	};
+	Q_ENUMS(DieRender)
 
 	/**
 	 * Starts the game
@@ -76,7 +88,9 @@ public:
 	 */
 	Q_INVOKABLE void toggle(int index);
 
-	Q_INVOKABLE bool buttonEnabled(int button);
+	Q_INVOKABLE bool buttonEnabled(ButtonType button);
+
+	Q_INVOKABLE DieRender dieState(int index);
 
 	Q_INVOKABLE PlayerWrapper* getCurrentPlayer();
 

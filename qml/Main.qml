@@ -27,21 +27,42 @@ MainView {
 	height: units.gu(75)
 	property real margin: units.gu(2)
 
+	function updateDie(die, index) {
+		die.parent.color = "#ffffff"
+		die.source = "dice/" + FarkleBackend.getValue(index) + ".png"
+		var state = FarkleBackend.dieState(index)
+		if (state == FarkleBackend.UNAVAILABLE) {
+			die.opacity = 0.5
+		} else {
+			die.opacity = 1.0
+			switch (state) {
+				case FarkleBackend.JUST_PICKED:
+					die.parent.color = "#00ff00"
+					break;
+				case FarkleBackend.UNPICKABLE:
+					die.parent.color = "#ff0000"
+					break;
+				default:
+					break;
+			}
+		}
+	}
+
 	Connections {
 		target: FarkleBackend
 		onUpdateState: {
 			var dice = [die1, die2, die3, die4, die5, die6]
 			for (var i = 0; i < 6; i++) {
-				dice[i].source = "dice/" + FarkleBackend.getValue(i) + ".png"
+				updateDie(dice[i], i)
 			}
 		}
 
 		onUpdateSelection: selectionsTable.model.emitReset()
 
 		onUpdateButtons: {
-			rollButton.enabled = FarkleBackend.buttonEnabled(0)
-			selButton.enabled = FarkleBackend.buttonEnabled(1)
-			bankButton.enabled = FarkleBackend.buttonEnabled(2)
+			rollButton.enabled = FarkleBackend.buttonEnabled(FarkleBackend.ROLL_BUTTON)
+			selButton.enabled = FarkleBackend.buttonEnabled(FarkleBackend.SELECT_BUTTON)
+			bankButton.enabled = FarkleBackend.buttonEnabled(FarkleBackend.BANK_BUTTON)
 		}
 
 		onNextPlayer: {
@@ -69,59 +90,107 @@ MainView {
 				rightMargin: margin
 			}
 
-			spacing: (width - 6 * 32 - 2 * margin) / 5
+			spacing: (width - 6 * 42 - 2 * margin) / 5
 
-			Image {
-				id: die1
-				source: "dice/1.png"
-				MouseArea {
-					anchors.fill: parent
-					onClicked: FarkleBackend.toggle(0)
+			Rectangle {
+				width: 42
+				height: 42
+				Image {
+					id: die1
+					source: "dice/1.png"
+					anchors.centerIn: parent
+					MouseArea {
+						anchors.fill: parent
+						onClicked: {
+							FarkleBackend.toggle(0)
+							updateDie(die1, 0)
+						}
+					}
 				}
 			}
 
-			Image {
-				id: die2
-				source: "dice/2.png"
-				MouseArea {
-					anchors.fill: parent
-					onClicked: FarkleBackend.toggle(1)
+			Rectangle {
+				width: 42
+				height: 42
+				Image {
+					id: die2
+					source: "dice/2.png"
+					anchors.centerIn: parent
+					MouseArea {
+						anchors.fill: parent
+						onClicked: {
+							FarkleBackend.toggle(1)
+							updateDie(die2, 1)
+						}
+					}
 				}
 			}
 
-			Image {
-				id: die3
-				source: "dice/3.png"
-				MouseArea {
-					anchors.fill: parent
-					onClicked: FarkleBackend.toggle(2)
+			Rectangle {
+				width: 42
+				height: 42
+				Image {
+					id: die3
+					source: "dice/3.png"
+					anchors.centerIn: parent
+					MouseArea {
+						anchors.fill: parent
+						onClicked: {
+							FarkleBackend.toggle(2)
+							updateDie(die3, 2)
+						}
+					}
 				}
 			}
 
-			Image {
-				id: die4
-				source: "dice/4.png"
-				MouseArea {
-					anchors.fill: parent
-					onClicked: FarkleBackend.toggle(3)
+			Rectangle {
+				width: 42
+				height: 42
+				Image {
+					id: die4
+					source: "dice/4.png"
+					anchors.centerIn: parent
+					MouseArea {
+						anchors.fill: parent
+						onClicked: {
+							FarkleBackend.toggle(3)
+							updateDie(die4, 3)
+						}
+					}
 				}
 			}
 
-			Image {
-				id: die5
-				source: "dice/5.png"
-				MouseArea {
-					anchors.fill: parent
-					onClicked: FarkleBackend.toggle(4)
+			Rectangle {
+				width: 42
+				height: 42
+				Image {
+					id: die5
+					source: "dice/5.png"
+					anchors.centerIn: parent
+					MouseArea {
+						anchors.fill: parent
+						onClicked: {
+							FarkleBackend.toggle(4)
+							updateDie(die5, 4)
+						}
+					}
 				}
 			}
 
-			Image {
-				id: die6
-				source: "dice/6.png"
-				MouseArea {
-					anchors.fill: parent
-					onClicked: FarkleBackend.toggle(5)
+			Rectangle {
+				width: 42
+				height: 42
+				Image {
+					id: die6
+					source: "dice/6.png"
+					anchors.centerIn: parent
+					MouseArea {
+						anchors.fill: parent
+						onClicked: {
+							FarkleBackend.toggle(5)
+							updateDie(die6, 5)
+						}
+					}
 				}
 			}
 		}
