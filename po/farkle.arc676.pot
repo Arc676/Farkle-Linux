@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 09:33+0000\n"
+"POT-Creation-Date: 2019-01-27 10:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,22 +21,22 @@ msgstr ""
 msgid "Farkle"
 msgstr ""
 
-#: ../qml/Main.qml:202
+#: ../qml/Main.qml:217
 msgid "Roll"
 msgstr ""
 
-#: ../qml/Main.qml:221
+#: ../qml/Main.qml:236
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/Main.qml:234
+#: ../qml/Main.qml:249
 msgid "Bank"
 msgstr ""
 
-#: ../qml/Main.qml:247
+#: ../qml/Main.qml:262
 msgid "Selections"
 msgstr ""
 
-#: ../qml/Main.qml:280
+#: ../qml/Main.qml:295
 msgid "Leaderboard"
 msgstr ""

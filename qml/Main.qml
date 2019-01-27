@@ -100,13 +100,18 @@ MainView {
 				rightMargin: margin
 			}
 
-			spacing: (width - 6 * 42 - 2 * margin) / 5
+			property real dieSpriteSize: units.gu(5)
+			property real dieRectSize: units.gu(6)
+
+			spacing: (width - 6 * dieRectSize - 2 * margin) / 5
 
 			Rectangle {
-				width: 42
-				height: 42
+				width: dieRow.dieRectSize
+				height: dieRow.dieRectSize
 				Image {
 					id: die1
+					width: dieRow.dieSpriteSize
+					height: dieRow.dieSpriteSize
 					source: "dice/1.png"
 					anchors.centerIn: parent
 					MouseArea {
@@ -117,10 +122,12 @@ MainView {
 			}
 
 			Rectangle {
-				width: 42
-				height: 42
+				width: dieRow.dieRectSize
+				height: dieRow.dieRectSize
 				Image {
 					id: die2
+					width: dieRow.dieSpriteSize
+					height: dieRow.dieSpriteSize
 					source: "dice/2.png"
 					anchors.centerIn: parent
 					MouseArea {
@@ -131,10 +138,12 @@ MainView {
 			}
 
 			Rectangle {
-				width: 42
-				height: 42
+				width: dieRow.dieRectSize
+				height: dieRow.dieRectSize
 				Image {
 					id: die3
+					width: dieRow.dieSpriteSize
+					height: dieRow.dieSpriteSize
 					source: "dice/3.png"
 					anchors.centerIn: parent
 					MouseArea {
@@ -145,10 +154,12 @@ MainView {
 			}
 
 			Rectangle {
-				width: 42
-				height: 42
+				width: dieRow.dieRectSize
+				height: dieRow.dieRectSize
 				Image {
 					id: die4
+					width: dieRow.dieSpriteSize
+					height: dieRow.dieSpriteSize
 					source: "dice/4.png"
 					anchors.centerIn: parent
 					MouseArea {
@@ -159,10 +170,12 @@ MainView {
 			}
 
 			Rectangle {
-				width: 42
-				height: 42
+				width: dieRow.dieRectSize
+				height: dieRow.dieRectSize
 				Image {
 					id: die5
+					width: dieRow.dieSpriteSize
+					height: dieRow.dieSpriteSize
 					source: "dice/5.png"
 					anchors.centerIn: parent
 					MouseArea {
@@ -173,10 +186,12 @@ MainView {
 			}
 
 			Rectangle {
-				width: 42
-				height: 42
+				width: dieRow.dieRectSize
+				height: dieRow.dieRectSize
 				Image {
 					id: die6
+					width: dieRow.dieSpriteSize
+					height: dieRow.dieSpriteSize
 					source: "dice/6.png"
 					anchors.centerIn: parent
 					MouseArea {
