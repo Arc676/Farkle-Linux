@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 11:10+0000\n"
+"POT-Creation-Date: 2019-01-27 11:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../qml/GameView.qml:65 ../qml/GameView.qml:67 ../qml/GameView.qml:80
-#: ../qml/GameView.qml:188
+#: ../qml/GameView.qml:183
 msgid "Bank"
 msgstr ""
 
-#: ../qml/GameView.qml:89 farkle.desktop.in.h:1
-msgid "Farkle"
-msgstr ""
-
-#: ../qml/GameView.qml:155
+#: ../qml/GameView.qml:150
 msgid "Roll"
 msgstr ""
 
-#: ../qml/GameView.qml:175
+#: ../qml/GameView.qml:170
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/GameView.qml:201
+#: ../qml/GameView.qml:196
 msgid "Selections"
 msgstr ""
 
-#: ../qml/GameView.qml:234
+#: ../qml/GameView.qml:229
 msgid "Leaderboard"
+msgstr ""
+
+#: ../qml/Main.qml:32 farkle.desktop.in.h:1
+msgid "Farkle"
+msgstr ""
+
+#: ../qml/Main.qml:49
+msgid "Play Game"
+msgstr ""
+
+#: ../qml/Main.qml:55
+msgid "Game Settings"
+msgstr ""
+
+#: ../qml/Main.qml:61
+msgid "About Farkle"
 msgstr ""

@@ -18,7 +18,7 @@ import Ubuntu.Components 1.3
 
 import FarkleBackend 1.0
 
-Page {
+Rectangle {
 	function dieTapped(index) {
 		var dice = [die1, die2, die3, die4, die5, die6]
 		if (FarkleBackend.hasFarkled) {
@@ -84,15 +84,10 @@ Page {
 	id: gamePage
 	anchors.fill: parent
 
-	header: PageHeader {
-		id: header
-		title: i18n.tr('Farkle')
-	}
-
 	Row {
 		id: dieRow
 		anchors {
-			top: header.bottom
+			top: parent.top
 			topMargin: margin
 			left: parent.left
 			leftMargin: margin

@@ -16,8 +16,6 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
-import FarkleBackend 1.0
-
 MainView {
 	id: root
 	objectName: 'mainView'
@@ -28,17 +26,93 @@ MainView {
 	height: units.gu(75)
 	property real margin: units.gu(2)
 
-	GameView {
-		id: gamePage
-	}
+	Page {
+		header: PageHeader {
+			id: header
+			title: i18n.tr('Farkle')
+		}
 
-	states: [
-		State {
-			name: "GameView"
-			PropertyChanges {
-				target: gamePage
-				state: "focused"
+		Row {
+			id: navRow
+			anchors {
+				top: header.bottom
+				topMargin: margin
+				left: parent.left
+				leftMargin: margin
+				right: parent.right
+				rightMargin: margin
+			}
+			spacing: margin
+
+			Button {
+				id: gameButton
+				text: i18n.tr("Play Game")
+				onClicked: pageViewer.state = "GameView"
+			}
+
+			Button {
+				id: setupButton
+				text: i18n.tr("Game Settings")
+				onClicked: pageViewer.state = "SetupView"
+			}
+
+			Button {
+				id: aboutButton
+				text: i18n.tr("About Farkle")
+				onClicked: pageViewer.state = "AboutView"
 			}
 		}
-	]
+
+		Rectangle {
+			id: pageViewer
+			anchors {
+				top: navRow.bottom
+				topMargin: margin
+				left: parent.left
+				right: parent.right
+				bottom: parent.bottom
+			}
+			
+			Component.onCompleted: state = "GameView"
+
+			GameView {
+				id: gamePage
+				visible: false
+			}
+
+			SetupView {
+				id: setupPage
+				visible: false
+			}
+
+			AboutView {
+				id: aboutPage
+				visible: false
+			}
+
+			states: [
+				State {
+					name: "GameView"
+					PropertyChanges {
+						target: gamePage
+						visible: true
+					}
+				},
+				State {
+					name: "SetupView"
+					PropertyChanges {
+						target: setupPage
+						visible: true
+					}
+				},
+				State {
+					name: "AboutView"
+					PropertyChanges {
+						target: aboutPage
+						visible: true
+					}
+				}
+			]
+		}
+	}
 }
