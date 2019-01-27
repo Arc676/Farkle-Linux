@@ -67,7 +67,14 @@ MainView {
 			}
 		}
 
-		onUpdateSelection: selectionsTable.model.emitReset()
+		onUpdateSelection: {
+			selectionsTable.model.emitReset()
+			if (FarkleBackend.accumulatedPoints == 0) {
+				bankButton.text = i18n.tr("Bank")
+			} else {
+				bankButton.text = i18n.tr("Bank") + " (" + FarkleBackend.accumulatedPoints + ")"
+			}
+		}
 
 		onUpdateButtons: {
 			rollButton.enabled = FarkleBackend.buttonEnabled(FarkleBackend.ROLL_BUTTON)
@@ -78,6 +85,7 @@ MainView {
 		onNextPlayer: {
 			selectionsTable.model.loadPlayer(FarkleBackend.getCurrentPlayer())
 			leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
+			bankButton.text = i18n.tr("Bank")
 		}
 	}
 
