@@ -36,6 +36,10 @@ public:
 
 	QHash<int, QByteArray> roleNames() const;
 
+	/**
+	 * Loads a new leaderboard state
+	 * @param wrapper A wrapper containing the leaderboard data
+	 */
 	Q_INVOKABLE void loadLeaderboard(PlayerWrapper* wrapper);
 };
 

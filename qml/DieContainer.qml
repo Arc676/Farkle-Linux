@@ -12,21 +12,33 @@
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef TWOCOLTABLEMODEL_H
-#define TWOCOLTABLEMODEL_H
+import QtQuick 2.4
+import QtQuick.Layouts 1.1
+import Ubuntu.Components 1.3
 
-#include <QAbstractTableModel>
-#include "playerwrapper.h"
+Rectangle {
+	id: container
 
-class TwoColumnTableModel: public QAbstractTableModel {
-	Q_OBJECT
-public:
-	int columnCount(const QModelIndex &parent) const;
+	property real rectSize: units.gu(6)
+	property real spriteSize: units.gu(5)
 
-	/**
-	 * Utility method for requesting a model reset from QML
-	 */
-	Q_INVOKABLE void emitReset();
-};
+	property url defaultSource
+	property int dieIndex
 
-#endif
+	width: rectSize
+	height: rectSize
+
+	property Image die: die
+
+	Image {
+		id: die
+		width: container.spriteSize
+		height: container.spriteSize
+		source: container.defaultSource
+		anchors.centerIn: container
+		MouseArea {
+			anchors.fill: die
+			onClicked: dieTapped(container.dieIndex)
+		}
+	}
+}

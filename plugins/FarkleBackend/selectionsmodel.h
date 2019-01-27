@@ -36,6 +36,10 @@ public:
 
 	QHash<int, QByteArray> roleNames() const;
 
+	/**
+	 * Loads new player data
+	 * @param wrapper A wrapper containing player data
+	 */
 	Q_INVOKABLE void loadPlayer(PlayerWrapper* wrapper);
 };
 

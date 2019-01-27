@@ -15,6 +15,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
+
 import FarkleBackend 1.0
 
 MainView {
@@ -38,19 +39,19 @@ MainView {
 	}
 
 	function updateDie(die, index) {
-		die.parent.color = "#ffffff"
-		die.source = "dice/" + FarkleBackend.getValue(index) + ".png"
+		die.color = "#ffffff"
+		die.die.source = "dice/" + FarkleBackend.getValue(index) + ".png"
 		var state = FarkleBackend.dieState(index)
 		if (state == FarkleBackend.UNAVAILABLE) {
-			die.opacity = 0.5
+			die.die.opacity = 0.5
 		} else {
-			die.opacity = 1.0
+			die.die.opacity = 1.0
 			switch (state) {
 				case FarkleBackend.JUST_PICKED:
-					die.parent.color = "#00ff00"
+					die.color = "#00ff00"
 					break;
 				case FarkleBackend.UNPICKABLE:
-					die.parent.color = "#ff0000"
+					die.color = "#ff0000"
 					break;
 				default:
 					break;
@@ -84,7 +85,7 @@ MainView {
 
 		onNextPlayer: {
 			selectionsTable.model.loadPlayer(FarkleBackend.getCurrentPlayer())
-			leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
+			leaderboardTable.model.emitReset()
 			bankButton.text = i18n.tr("Bank")
 		}
 	}
@@ -108,106 +109,44 @@ MainView {
 				rightMargin: margin
 			}
 
-			property real dieSpriteSize: units.gu(5)
-			property real dieRectSize: units.gu(6)
+			spacing: (width - 6 * die1.rectSize - 2 * margin) / 5
 
-			spacing: (width - 6 * dieRectSize - 2 * margin) / 5
-
-			Rectangle {
-				width: dieRow.dieRectSize
-				height: dieRow.dieRectSize
-				Image {
-					id: die1
-					width: dieRow.dieSpriteSize
-					height: dieRow.dieSpriteSize
-					source: "dice/1.png"
-					anchors.centerIn: parent
-					MouseArea {
-						anchors.fill: parent
-						onClicked: dieTapped(0)
-					}
-				}
+			DieContainer {
+				id: die1
+				defaultSource: "dice/1.png"
+				dieIndex: 0
 			}
 
-			Rectangle {
-				width: dieRow.dieRectSize
-				height: dieRow.dieRectSize
-				Image {
-					id: die2
-					width: dieRow.dieSpriteSize
-					height: dieRow.dieSpriteSize
-					source: "dice/2.png"
-					anchors.centerIn: parent
-					MouseArea {
-						anchors.fill: parent
-						onClicked: dieTapped(1)
-					}
-				}
+			DieContainer {
+				id: die2
+				defaultSource: "dice/2.png"
+				dieIndex: 1
 			}
 
-			Rectangle {
-				width: dieRow.dieRectSize
-				height: dieRow.dieRectSize
-				Image {
-					id: die3
-					width: dieRow.dieSpriteSize
-					height: dieRow.dieSpriteSize
-					source: "dice/3.png"
-					anchors.centerIn: parent
-					MouseArea {
-						anchors.fill: parent
-						onClicked: dieTapped(2)
-					}
-				}
+			DieContainer {
+				id: die3
+				defaultSource: "dice/3.png"
+				dieIndex: 2
 			}
 
-			Rectangle {
-				width: dieRow.dieRectSize
-				height: dieRow.dieRectSize
-				Image {
-					id: die4
-					width: dieRow.dieSpriteSize
-					height: dieRow.dieSpriteSize
-					source: "dice/4.png"
-					anchors.centerIn: parent
-					MouseArea {
-						anchors.fill: parent
-						onClicked: dieTapped(3)
-					}
-				}
+			DieContainer {
+				id: die4
+				defaultSource: "dice/4.png"
+				dieIndex: 3
 			}
 
-			Rectangle {
-				width: dieRow.dieRectSize
-				height: dieRow.dieRectSize
-				Image {
-					id: die5
-					width: dieRow.dieSpriteSize
-					height: dieRow.dieSpriteSize
-					source: "dice/5.png"
-					anchors.centerIn: parent
-					MouseArea {
-						anchors.fill: parent
-						onClicked: dieTapped(4)
-					}
-				}
+			DieContainer {
+				id: die5
+				defaultSource: "dice/5.png"
+				dieIndex: 4
 			}
 
-			Rectangle {
-				width: dieRow.dieRectSize
-				height: dieRow.dieRectSize
-				Image {
-					id: die6
-					width: dieRow.dieSpriteSize
-					height: dieRow.dieSpriteSize
-					source: "dice/6.png"
-					anchors.centerIn: parent
-					MouseArea {
-						anchors.fill: parent
-						onClicked: dieTapped(5)
-					}
-				}
+			DieContainer {
+				id: die6
+				defaultSource: "dice/6.png"
+				dieIndex: 5
 			}
+
 		}
 
 		Column {
@@ -234,6 +173,7 @@ MainView {
 						FarkleBackend.rollDice();
 					} else {
 						FarkleBackend.startGame(1, 10)
+						leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
 					}
 				}
 			}
