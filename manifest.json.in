@@ -1,6 +1,6 @@
 {
     "name": "farkle.arc676",
-    "description": "A Linux frontend to allow playing the Farkle dice game",
+    "description": "A frontend to the Farkle dice game for Ubuntu Touch",
     "architecture": "@CLICK_ARCH@",
     "title": "Farkle",
     "hooks": {

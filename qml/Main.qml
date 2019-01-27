@@ -77,6 +77,7 @@ MainView {
 
 			GameView {
 				id: gamePage
+				setup: setupPage
 				visible: false
 			}
 

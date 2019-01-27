@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 14:32+0000\n"
+"POT-Creation-Date: 2019-01-27 15:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../qml/GameView.qml:65 ../qml/GameView.qml:67 ../qml/GameView.qml:80
-#: ../qml/GameView.qml:183
+#: ../qml/GameView.qml:185
 msgid "Bank"
 msgstr ""
 
-#: ../qml/GameView.qml:150
+#: ../qml/GameView.qml:152
 msgid "Roll"
 msgstr ""
 
-#: ../qml/GameView.qml:170
+#: ../qml/GameView.qml:172
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/GameView.qml:196
+#: ../qml/GameView.qml:198
 msgid "Selections"
 msgstr ""
 
-#: ../qml/GameView.qml:229
+#: ../qml/GameView.qml:231
 msgid "Leaderboard"
 msgstr ""
 
@@ -52,4 +52,28 @@ msgstr ""
 
 #: ../qml/Main.qml:61
 msgid "About Farkle"
+msgstr ""
+
+#: ../qml/SetupView.qml:36 ../qml/SetupView.qml:50 ../qml/SetupView.qml:60
+msgid "Players: "
+msgstr ""
+
+#: ../qml/SetupView.qml:46
+msgid "Fewer players"
+msgstr ""
+
+#: ../qml/SetupView.qml:57
+msgid "More players"
+msgstr ""
+
+#: ../qml/SetupView.qml:67 ../qml/SetupView.qml:81 ../qml/SetupView.qml:91
+msgid "Turns: "
+msgstr ""
+
+#: ../qml/SetupView.qml:77
+msgid "Fewer turns"
+msgstr ""
+
+#: ../qml/SetupView.qml:88
+msgid "More turns"
 msgstr ""

@@ -84,6 +84,8 @@ Rectangle {
 	id: gamePage
 	anchors.fill: parent
 
+	property SetupView setup
+
 	Row {
 		id: dieRow
 		anchors {
@@ -158,7 +160,7 @@ Rectangle {
 				if (FarkleBackend.gameInProgress) {
 					FarkleBackend.rollDice();
 				} else {
-					FarkleBackend.startGame(1, 10)
+					FarkleBackend.startGame(setup.playerCount, setup.turnCount)
 					leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
 				}
 			}

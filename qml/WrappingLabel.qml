@@ -16,8 +16,12 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 Label {
-	anchors.horizontalCenter: parent.horizontalCenter
-	width: parent.width
+	anchors {
+		left: parent.left
+		leftMargin: margin
+		right: parent.right
+		rightMargin: margin
+	}
 	wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 	onLinkActivated: Qt.openUrlExternally(link)
 }
