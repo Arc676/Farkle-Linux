@@ -15,6 +15,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
+import QtMultimedia 5.8
 
 import FarkleBackend 1.0
 
@@ -29,6 +30,7 @@ Rectangle {
 		} else {
 			FarkleBackend.toggle(index)
 			updateDie(dice[index], index)
+			tickSFX.play()
 		}
 	}
 
@@ -116,6 +118,12 @@ Rectangle {
 				resetDice()
 			}
 		}
+
+		onRollFarkle: farkleSFX.play()
+
+		onRollTPair: tpairSFX.play()
+
+		onRollStraight: straightSFX.play()
 	}
 
 	id: gamePage
@@ -218,6 +226,7 @@ Rectangle {
 			onClicked: {
 				if (FarkleBackend.gameInProgress) {
 					FarkleBackend.rollDice();
+					rollSFX.play()
 				} else {
 					FarkleBackend.startGame(setup.playerCount, setup.turnCount)
 					leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
@@ -251,7 +260,10 @@ Rectangle {
 				leftMargin: margin
 				rightMargin: margin
 			}
-			onClicked: FarkleBackend.bank()
+			onClicked: {
+				FarkleBackend.bank()
+				bankSFX.play()
+			}
 		}
 
 		Label {
@@ -319,5 +331,35 @@ Rectangle {
 				}
 			}
 		}
+	}
+
+	SoundEffect {
+		id: bankSFX
+		source: "sfx/bank.m4a"
+	}
+
+	SoundEffect {
+		id: farkleSFX
+		source: "sfx/farkle.wav"
+	}
+
+	SoundEffect {
+		id: rollSFX
+		source: "sfx/roll.wav"
+	}
+
+	SoundEffect {
+		id: straightSFX
+		source: "sfx/straight.wav"
+	}
+
+	SoundEffect {
+		id: tickSFX
+		source: "sfx/tick.wav"
+	}
+
+	SoundEffect {
+		id: tpairSFX
+		source: "sfx/tpair.wav"
 	}
 }

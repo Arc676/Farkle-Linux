@@ -211,6 +211,21 @@ signals:
 	 * Indicates that the turn has been passed to the next player
 	 */
 	void nextPlayer();
+
+	/**
+	 * Indicates that the latest roll resulted in a Farkle
+	 */
+	void rollFarkle();
+
+	/**
+	 * Indicates that the latest roll resulted in a straight
+	 */
+	void rollStraight();
+
+	/**
+	 * Indicates that the latest roll resulted in a triple pair
+	 */
+	void rollTPair();
 };
 
 #endif

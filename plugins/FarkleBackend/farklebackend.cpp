@@ -59,9 +59,14 @@ void FarkleBackend::rollDice() {
 	case FARKLE:
 		emptyHand(players[currentPlayer]);
 		enterState(TURN_ENDED);
+		emit rollFarkle();
 		break;
 	case STRAIGHT:
+		emit rollStraight();
 	case TRIPLE_PAIR:
+		if (type != STRAIGHT) {
+			emit rollTPair();
+		}
 		updateSelectionValue(sel);
 		enterState(ROLLING);
 		break;
