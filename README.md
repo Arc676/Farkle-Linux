@@ -1,6 +1,6 @@
 # Farkle
 
-A Linux frontend to allow playing the Farkle dice game with the [Farkle library](https://github.com/Arc676/Farkle)
+A QML/C++ frontend to the [Farkle library](https://github.com/Arc676/Farkle) for Ubuntu and Ubuntu Touch
 
 Full gameplay details and rules can be found in the README in that repository.
 
@@ -10,4 +10,4 @@ This version of Farkle was developed using `clickable`. The repository includes 
 
 # Licensing
 
-Project available under GPLv3. Assets available under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Project available under GPLv3. Dice sprites by Arc676/Alessandro Vinciguerra available under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Application icon by [Freepik](http://www.freepik.com/) from [flaticon](http://www.flaticon.com/) available under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).

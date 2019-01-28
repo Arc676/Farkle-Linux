@@ -54,7 +54,7 @@ Rectangle {
 				text: "Application icon by <a href='http://www.freepik.com'>Freepik</a>"
 			}
 
-			WrappingLabel {
+			/*WrappingLabel {
 				text: "<a href='https://freesound.org/people/kiddpark/sounds/201159/'>Bank sound effect</a> by kiddpark"
 			}
 
@@ -77,7 +77,7 @@ Rectangle {
 
 			WrappingLabel {
 				text: "<a href='https://freesound.org/people/KorgMS2000B/sounds/54405/'>Die selection ticking sound effect</a> by KorgMS2000B"
-			}
+			}*/
 
 			WrappingLabel {
 				text: "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> assets"

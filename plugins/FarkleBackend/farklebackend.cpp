@@ -83,6 +83,7 @@ void FarkleBackend::confirmSelection() {
 	} else {
 		deselectRoll(roll);
 	}
+	emit updateState();
 }
 
 void FarkleBackend::bank() {

@@ -221,6 +221,7 @@ Rectangle {
 			id: selButton
 			width: parent.width
 			text: i18n.tr('Confirm selection')
+			enabled: false
 			anchors {
 				left: parent.left
 				right: parent.right
@@ -234,6 +235,7 @@ Rectangle {
 			id: bankButton
 			width: parent.width
 			text: i18n.tr('Bank')
+			enabled: false
 			anchors {
 				left: parent.left
 				right: parent.right
