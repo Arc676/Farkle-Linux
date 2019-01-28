@@ -20,6 +20,9 @@ import FarkleBackend 1.0
 
 Rectangle {
 	function dieTapped(index) {
+		if (!FarkleBackend.gameInProgress) {
+			return
+		}
 		var dice = [die1, die2, die3, die4, die5, die6]
 		if (FarkleBackend.hasFarkled) {
 			FarkleBackend.endTurn()
@@ -57,6 +60,20 @@ Rectangle {
 			for (var i = 0; i < 6; i++) {
 				updateDie(dice[i], i)
 			}
+			switch (FarkleBackend.getRollType()) {
+				case FarkleBackend.FARKLE_Q:
+					feedbackLabel.text = i18n.tr("Farkle! Tap on any die to pass the turn.")
+					break;
+				case FarkleBackend.TRIPLE_PAIR_Q:
+					feedbackLabel.text = i18n.tr("Triple pair!")
+					break;
+				case FarkleBackend.STRAIGHT_Q:
+					feedbackLabel.text = i18n.tr("Straight!")
+					break;
+				default:
+					feedbackLabel.text = ""
+					break;
+			}
 		}
 
 		onUpdateSelection: {
@@ -78,6 +95,17 @@ Rectangle {
 			selectionsTable.model.loadPlayer(FarkleBackend.getCurrentPlayer())
 			leaderboardTable.model.emitReset()
 			bankButton.text = i18n.tr("Bank")
+			if (FarkleBackend.gameInProgress) {
+				turnLabel.text = i18n.tr("%1's turn %2 of %3. Score: %4")
+					.arg(FarkleBackend.getCurrentPlayerName())
+					.arg(FarkleBackend.currentTurn)
+					.arg(FarkleBackend.turnLimit)
+					.arg(FarkleBackend.getCurrentPlayerScore())
+			} else {
+				turnLabel.text = i18n.tr("No game in progress")
+				rollButton.text = i18n.tr("New Game")
+				rollButton.enabled = true
+			}
 		}
 	}
 
@@ -86,10 +114,32 @@ Rectangle {
 
 	property SetupView setup
 
+	Label {
+		id: turnLabel
+		text: i18n.tr("No game in progress")
+		anchors {
+			top: parent.top
+			topMargin: margin
+			left: parent.left
+			leftMargin: margin
+		}
+	}
+
+	Label {
+		id: feedbackLabel
+		text: ""
+		anchors {
+			top: turnLabel.bottom
+			topMargin: margin / 2
+			left: parent.left
+			leftMargin: margin
+		}
+	}
+
 	Row {
 		id: dieRow
 		anchors {
-			top: parent.top
+			top: feedbackLabel.bottom
 			topMargin: margin
 			left: parent.left
 			leftMargin: margin
@@ -149,7 +199,7 @@ Rectangle {
 		Button {
 			id: rollButton
 			width: parent.width
-			text: i18n.tr('Roll')
+			text: i18n.tr('New Game')
 			anchors {
 				left: parent.left
 				right: parent.right
@@ -162,6 +212,7 @@ Rectangle {
 				} else {
 					FarkleBackend.startGame(setup.playerCount, setup.turnCount)
 					leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
+					text = i18n.tr('Roll')
 				}
 			}
 		}
@@ -206,7 +257,7 @@ Rectangle {
 		ListView {
 			id: selectionsTable
 			width: parent.width
-			height: units.gu(15)
+			height: units.gu(8)
 			model: SelectionsModel {}
 			delegate: Rectangle {
 				width: parent.width
@@ -239,7 +290,7 @@ Rectangle {
 		ListView {
 			id: leaderboardTable
 			width: parent.width
-			height: units.gu(15)
+			height: units.gu(8)
 			model: LeaderboardModel {}
 			delegate: Rectangle {
 				width: parent.width

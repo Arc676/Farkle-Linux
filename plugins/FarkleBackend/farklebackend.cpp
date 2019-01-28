@@ -28,11 +28,11 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 		free(leaderboard);
 	}
 
-	turns = turnLimit;
+	this->turnLimit = turnLimit;
 	this->pCount = pCount;
 
 	accumulatedPoints = 0;
-	turn = 1;
+	currentTurn = 1;
 
 	roll = (Roll*)malloc(sizeof(Roll));
 	initRoll(roll);
@@ -53,9 +53,9 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 void FarkleBackend::rollDice() {
 	newRoll(roll);
 	Selection* sel = (Selection*)malloc(sizeof(Selection));
-	RollType type = determineRollType(roll, sel);
-	hasFarkled = type == FARKLE;
-	switch (type) {
+	rollType = determineRollType(roll, sel);
+	hasFarkled = rollType == FARKLE;
+	switch (rollType) {
 	case FARKLE:
 		emptyHand(players[currentPlayer]);
 		enterState(TURN_ENDED);
@@ -95,13 +95,13 @@ void FarkleBackend::endTurn() {
 	setupNextTurn();
 
 	if (currentPlayer == 0) {
-		turn++;
-		if (turn > turns) {
+		currentTurn++;
+		if (currentTurn > turnLimit) {
 			gameInProgress = false;
 			enterState(TURN_ENDED);
-			return;
 		}
 	}
+	emit nextPlayer();
 }
 
 int FarkleBackend::getValue(int index) {
@@ -118,7 +118,6 @@ void FarkleBackend::setupNextTurn() {
 	hasFarkled = false;
 	initRoll(roll);
 	sortPlayers(leaderboard, pCount);
-	emit nextPlayer();
 }
 
 void FarkleBackend::updateSelectionValue(Selection* sel) {
@@ -169,4 +168,22 @@ PlayerWrapper* FarkleBackend::getLeaderboard() {
 	wrapper->setLeaderboard(leaderboard);
 	wrapper->setPlayerCount(pCount);
 	return wrapper;
+}
+
+QString FarkleBackend::getCurrentPlayerName() {
+	if (!gameInProgress) {
+		return "";
+	}
+	return QString(players[currentPlayer]->name);
+}
+
+int FarkleBackend::getCurrentPlayerScore() {
+	if (!gameInProgress) {
+		return 0;
+	}
+	return players[currentPlayer]->score;
+}
+
+FarkleBackend::RollTypeQ FarkleBackend::getRollType() {
+	return (RollTypeQ)rollType;
 }

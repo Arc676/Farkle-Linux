@@ -23,6 +23,7 @@ Rectangle {
 	ScrollView {
 		id: scroll
 		anchors.fill: parent
+		anchors.topMargin: margin
 
 		Column {
 			width: scroll.width

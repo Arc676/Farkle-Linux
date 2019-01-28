@@ -67,7 +67,6 @@ MainView {
 			id: pageViewer
 			anchors {
 				top: navRow.bottom
-				topMargin: margin
 				left: parent.left
 				right: parent.right
 				bottom: parent.bottom

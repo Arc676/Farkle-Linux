@@ -26,6 +26,7 @@ class FarkleBackend: public QObject {
 	// game state
 	GameState state;
 	Roll* roll = nullptr;
+	RollType rollType = SIMPLE;
 	int pickable[6] = {0, 0, 0, 0, 0, 0};
 	bool gameInProgress = false;
 
@@ -34,8 +35,8 @@ class FarkleBackend: public QObject {
 	Player** leaderboard = nullptr;
 
 	// turn state
-	int turn = 0;
-	int turns = 0;
+	int currentTurn = 0;
+	int turnLimit = 0;
 	int pCount = 0;
 	int currentPlayer = 0;
 	int accumulatedPoints = 0;
@@ -43,6 +44,8 @@ class FarkleBackend: public QObject {
 public:
 	Q_PROPERTY(bool gameInProgress MEMBER gameInProgress);
 	Q_PROPERTY(bool hasFarkled MEMBER hasFarkled);
+	Q_PROPERTY(int currentTurn MEMBER currentTurn);
+	Q_PROPERTY(int turnLimit MEMBER turnLimit);
 	Q_PROPERTY(int accumulatedPoints MEMBER accumulatedPoints);
 
 	/**
@@ -65,6 +68,14 @@ public:
 		PICKABLE
 	};
 	Q_ENUMS(DieRender)
+
+	/**
+	 * Copy library RollType enum to expose to QML
+	 */
+	enum RollTypeQ : int {
+		FARKLE_Q, SIMPLE_Q, TRIPLE_PAIR_Q, STRAIGHT_Q
+	};
+	Q_ENUMS(RollTypeQ)
 
 	/**
 	 * Starts the game
@@ -128,6 +139,24 @@ public:
 	 * @return A wrapper containing data regarding the leaderboard
 	 */
 	Q_INVOKABLE PlayerWrapper* getLeaderboard();
+
+	/**
+	 * Obtains the current player's name
+	 * @return Name of player whose turn it currently is, or an empty string if there is no game in progress
+	 */
+	Q_INVOKABLE QString getCurrentPlayerName();
+
+	/**
+	 * Obtains the current player's score
+	 * @return Score of player whose turn it currently is, or 0 if there is no game in progress
+	 */
+	Q_INVOKABLE int getCurrentPlayerScore();
+
+	/**
+	 * Obtains the latest roll type
+	 * @return Roll type of the latest roll, typecast to RollTypeQ
+	 */
+	Q_INVOKABLE RollTypeQ getRollType();
 
 	/**
 	 * Sets up the game for the next player's turn

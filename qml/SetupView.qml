@@ -28,6 +28,7 @@ Rectangle {
 			fill: parent
 			leftMargin: margin
 			rightMargin: margin
+			topMargin: margin
 		}
 		spacing: margin
 

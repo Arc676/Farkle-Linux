@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 15:14+0000\n"
+"POT-Creation-Date: 2019-01-28 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,48 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/GameView.qml:65 ../qml/GameView.qml:67 ../qml/GameView.qml:80
-#: ../qml/GameView.qml:185
+#: ../qml/GameView.qml:65
+msgid "Farkle! Tap on any die to pass the turn."
+msgstr ""
+
+#: ../qml/GameView.qml:68
+msgid "Triple pair!"
+msgstr ""
+
+#: ../qml/GameView.qml:71
+msgid "Straight!"
+msgstr ""
+
+#: ../qml/GameView.qml:82 ../qml/GameView.qml:84 ../qml/GameView.qml:97
+#: ../qml/GameView.qml:236
 msgid "Bank"
 msgstr ""
 
-#: ../qml/GameView.qml:152
+#: ../qml/GameView.qml:99
+msgid "%1's turn %2 of %3. Score: %4"
+msgstr ""
+
+#: ../qml/GameView.qml:105 ../qml/GameView.qml:119
+msgid "No game in progress"
+msgstr ""
+
+#: ../qml/GameView.qml:106 ../qml/GameView.qml:202
+msgid "New Game"
+msgstr ""
+
+#: ../qml/GameView.qml:215
 msgid "Roll"
 msgstr ""
 
-#: ../qml/GameView.qml:172
+#: ../qml/GameView.qml:223
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/GameView.qml:198
+#: ../qml/GameView.qml:249
 msgid "Selections"
 msgstr ""
 
-#: ../qml/GameView.qml:231
+#: ../qml/GameView.qml:282
 msgid "Leaderboard"
 msgstr ""
 
@@ -54,26 +78,26 @@ msgstr ""
 msgid "About Farkle"
 msgstr ""
 
-#: ../qml/SetupView.qml:36 ../qml/SetupView.qml:50 ../qml/SetupView.qml:60
+#: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
 msgid "Players: "
 msgstr ""
 
-#: ../qml/SetupView.qml:46
+#: ../qml/SetupView.qml:47
 msgid "Fewer players"
 msgstr ""
 
-#: ../qml/SetupView.qml:57
+#: ../qml/SetupView.qml:58
 msgid "More players"
 msgstr ""
 
-#: ../qml/SetupView.qml:67 ../qml/SetupView.qml:81 ../qml/SetupView.qml:91
+#: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
 msgid "Turns: "
 msgstr ""
 
-#: ../qml/SetupView.qml:77
+#: ../qml/SetupView.qml:78
 msgid "Fewer turns"
 msgstr ""
 
-#: ../qml/SetupView.qml:88
+#: ../qml/SetupView.qml:89
 msgid "More turns"
 msgstr ""
