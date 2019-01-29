@@ -1,5 +1,5 @@
 # Spanish translation for Farkle.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2019
 # This file is distributed under the same license as the farkle.arc676 package.
 # Krakakanok <krakakanok@protonmail.com>, 2019.
 #
