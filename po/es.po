@@ -1,0 +1,105 @@
+# Spanish translation for Farkle.
+# Copyright (C) 2019
+# This file is distributed under the same license as the farkle.arc676 package.
+# Krakakanok <krakakanok@protonmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: farkle.arc676\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-28 11:18+0000\n"
+"PO-Revision-Date: 2019-01-29 22:56+0100\n"
+"Language-Team: UBports Spanish Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: Krakakanok <Krakakanok@protonmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
+
+#: ../qml/GameView.qml:65
+msgid "Farkle! Tap on any die to pass the turn."
+msgstr "¡Farkle! Pulsar en cualquier dado para pasar el turno."
+
+#: ../qml/GameView.qml:68
+msgid "Triple pair!"
+msgstr "¡Triple pareja!"
+
+#: ../qml/GameView.qml:71
+#, fuzzy
+msgid "Straight!"
+msgstr "¡Directo!"
+
+#: ../qml/GameView.qml:82 ../qml/GameView.qml:84 ../qml/GameView.qml:97
+#: ../qml/GameView.qml:237
+msgid "Bank"
+msgstr "Banca"
+
+#: ../qml/GameView.qml:99
+msgid "%1's turn %2 of %3. Score: %4"
+msgstr "%1 turno %2 de %3. Puntuación: %4"
+
+#: ../qml/GameView.qml:105 ../qml/GameView.qml:119
+msgid "No game in progress"
+msgstr "Ningún juego en curso"
+
+#: ../qml/GameView.qml:106 ../qml/GameView.qml:202
+msgid "New Game"
+msgstr "Nuevo juego"
+
+#: ../qml/GameView.qml:215
+msgid "Roll"
+msgstr "Tirar"
+
+#: ../qml/GameView.qml:223
+msgid "Confirm selection"
+msgstr "Confirmar la selección"
+
+#: ../qml/GameView.qml:251
+msgid "Selections"
+msgstr "Selecciones"
+
+#: ../qml/GameView.qml:284
+msgid "Leaderboard"
+msgstr "Clasificación"
+
+#: ../qml/Main.qml:32 farkle.desktop.in.h:1
+msgid "Farkle"
+msgstr "Farkle"
+
+#: ../qml/Main.qml:49
+msgid "Play Game"
+msgstr "Jugar al juego"
+
+#: ../qml/Main.qml:55
+msgid "Game Settings"
+msgstr "Ajustes del juego"
+
+#: ../qml/Main.qml:61
+msgid "About Farkle"
+msgstr "Acerca de Farkle"
+
+#: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
+msgid "Players: "
+msgstr "Jugadores: "
+
+#: ../qml/SetupView.qml:47
+msgid "Fewer players"
+msgstr "Menos jugadores"
+
+#: ../qml/SetupView.qml:58
+msgid "More players"
+msgstr "Mas jugadores"
+
+#: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
+msgid "Turns: "
+msgstr "Turnos: "
+
+#: ../qml/SetupView.qml:78
+msgid "Fewer turns"
+msgstr "Pocos turnos"
+
+#: ../qml/SetupView.qml:89
+msgid "More turns"
+msgstr "Más turnos"
