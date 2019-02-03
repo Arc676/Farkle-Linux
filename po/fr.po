@@ -2,6 +2,7 @@
 # Copyright (C) 2019
 # This file is distributed under the same license as the farkle.arc676 package.
 # Anne 017 <anneonyme017@openmailbox.org>, 2019.
+# Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>, 2019
 #
 msgid ""
 msgstr ""
@@ -67,7 +68,7 @@ msgstr "Farkle"
 
 #: ../qml/Main.qml:49
 msgid "Play Game"
-msgstr "Commencer une partie"
+msgstr "Jouer"
 
 #: ../qml/Main.qml:55
 msgid "Game Settings"
