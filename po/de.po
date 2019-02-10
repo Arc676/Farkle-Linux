@@ -1,7 +1,8 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# German translation for Farkle
+# Copyright (C) 2019
 # This file is distributed under the same license as the farkle.arc676 package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Daniel Frost <one@frostinfo.de> 2019.
+# Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com> 2019.
 #
 msgid ""
 msgstr ""
@@ -77,7 +78,7 @@ msgstr "Auf's Punktekonto"
 
 #: ../qml/GameView.qml:99
 msgid "%1's turn %2 of %3. Score: %4"
-msgstr "%1's Zug %2 of %3. Punkte: %4"
+msgstr "%1's Zug %2 von %3. Punkte: %4"
 
 #: ../qml/GameView.qml:105 ../qml/GameView.qml:119
 msgid "No game in progress"
@@ -97,7 +98,7 @@ msgstr "Auswahl bestätigen"
 
 #: ../qml/GameView.qml:251
 msgid "Selections"
-msgstr "Auswahl"
+msgstr "Auswahlen"
 
 #: ../qml/GameView.qml:284
 msgid "Leaderboard"
