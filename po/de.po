@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the farkle.arc676 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: farkle.arc676\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-10 06:58+0000\n"
+"PO-Revision-Date: 2019-02-10 08:09+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
+msgid "Players: "
+msgstr "Spieler: "
+
+#: ../qml/SetupView.qml:47
+msgid "Fewer players"
+msgstr "Weniger Spieler"
+
+#: ../qml/SetupView.qml:58
+msgid "More players"
+msgstr "Mehr Spieler"
+
+#: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
+msgid "Turns: "
+msgstr "Runden: "
+
+#: ../qml/SetupView.qml:78
+msgid "Fewer turns"
+msgstr "Weniger Runden"
+
+#: ../qml/SetupView.qml:89
+msgid "More turns"
+msgstr "Mehr Runden"
+
+#: ../qml/Main.qml:32 farkle.desktop.in.h:1
+msgid "Farkle"
+msgstr "Farkle"
+
+#: ../qml/Main.qml:49
+msgid "Play Game"
+msgstr "Spielen"
+
+#: ../qml/Main.qml:55
+msgid "Game Settings"
+msgstr "Einstellungen"
+
+#: ../qml/Main.qml:61
+msgid "About Farkle"
+msgstr "Über Farkle"
+
+#: ../qml/GameView.qml:65
+msgid "Farkle! Tap on any die to pass the turn."
+msgstr "Farkle! Klicke auf einen Würfel um den Zug zu beenden."
+
+#: ../qml/GameView.qml:68
+msgid "Triple pair!"
+msgstr "Dreifaches Paar!"
+
+#: ../qml/GameView.qml:71
+msgid "Straight!"
+msgstr "Große Straße!"
+
+#: ../qml/GameView.qml:82 ../qml/GameView.qml:84 ../qml/GameView.qml:97
+#: ../qml/GameView.qml:237
+msgid "Bank"
+msgstr "Auf's Punktekonto"
+
+#: ../qml/GameView.qml:99
+msgid "%1's turn %2 of %3. Score: %4"
+msgstr "%1's Zug %2 of %3. Punkte: %4"
+
+#: ../qml/GameView.qml:105 ../qml/GameView.qml:119
+msgid "No game in progress"
+msgstr "Kein laufendes Spiel"
+
+#: ../qml/GameView.qml:106 ../qml/GameView.qml:202
+msgid "New Game"
+msgstr "Neues Spiel"
+
+#: ../qml/GameView.qml:215
+msgid "Roll"
+msgstr "Würfeln"
+
+#: ../qml/GameView.qml:223
+msgid "Confirm selection"
+msgstr "Auswahl bestätigen"
+
+#: ../qml/GameView.qml:251
+msgid "Selections"
+msgstr "Auswahl"
+
+#: ../qml/GameView.qml:284
+msgid "Leaderboard"
+msgstr "Punktstände"
