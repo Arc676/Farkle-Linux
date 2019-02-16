@@ -30,6 +30,18 @@ MainView {
 		header: PageHeader {
 			id: header
 			title: i18n.tr('Farkle')
+            
+            trailingActionBar.actions: [
+
+            Action {
+                iconName: "info"
+                text: i18n.tr("Gameplay rules")
+
+                onTriggered: {
+                    pageViewer.state = "RulesView"
+                }
+            }
+        ]
 		}
 
 		Row {
@@ -89,6 +101,11 @@ MainView {
 				id: aboutPage
 				visible: false
 			}
+			
+			RulesView {
+				id: rulesPage
+				visible: false
+			}
 
 			states: [
 				State {
@@ -109,6 +126,13 @@ MainView {
 					name: "AboutView"
 					PropertyChanges {
 						target: aboutPage
+						visible: true
+					}
+				},
+				State {
+					name: "RulesView"
+					PropertyChanges {
+						target: rulesPage
 						visible: true
 					}
 				}

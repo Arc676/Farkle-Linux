@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-10 06:58+0000\n"
-"PO-Revision-Date: 2019-02-10 08:09+0100\n"
+"POT-Creation-Date: 2019-02-16 20:06+0000\n"
+"PO-Revision-Date: 2019-02-16 21:10+0100\n"
+"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de\n"
 
 #: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
 msgid "Players: "
@@ -43,25 +43,78 @@ msgstr "Weniger Runden"
 msgid "More turns"
 msgstr "Mehr Runden"
 
+#: ../qml/AboutView.qml:33
+msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
+msgstr ""
+"Programmierung von Arc676/Alessandro Vinciguerra. Projekt verfügbar unter"
+
+#: ../qml/AboutView.qml:37
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation (version 3)."
+msgstr ""
+"Dieses Programm ist freie Software: du kannst es verteilen und/oder "
+"modifizieren nach den Regeln der GNU Public License wie von der Free "
+"Software Foundation (Version 3) veröffentlicht."
+
+#: ../qml/AboutView.qml:41
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"Dieses Programm entstand in der Hoffnung, dass es nützlich ist, aber OHNE "
+"JEDE GARANTIE; nicht einmal implizierte Garantien für GEBRAUCHSFÄHIGKEIT "
+"oder EINE SPEZIELLE ANWENDBARKEIT. Für mehr Details lies bitte die GNU "
+"General Public License."
+
+#: ../qml/AboutView.qml:45
+msgid ""
+"For the full license text, visit the <a href='https://github.com/Arc676/"
+"Farkle-Linux'>repository</a> or the <a href='http://www.gnu.org/"
+"licenses/'>GNU licenses page</a>"
+msgstr ""
+"Für den gesamten Lizenztext, besuche das <a href='https://github.com/Arc676/"
+"Farkle-Linux'>Repository</a> oder die <a href='http://www.gnu.org/licenses/'>"
+"\"GNU licenses\"Seite</a>"
+
+#: ../qml/AboutView.qml:49 ../qml/AboutView.qml:83
+msgid "assets"
+msgstr "Eigentum"
+
+#: ../qml/AboutView.qml:54
+msgid "Application icon by <a href='http://www.freepik.com'>Freepik</a>"
+msgstr "Anwendungssymbol von <a href='http://www.freepik.com'>Freepik</a>"
+
+#: ../qml/AboutView.qml:88
+msgid "Dice sprites by Arc676/Alessandro Vinciguerra"
+msgstr "Würfelbilder von Arc676/Alessandro Vinciguerra"
+
 #: ../qml/Main.qml:32 farkle.desktop.in.h:1
 msgid "Farkle"
 msgstr "Farkle"
 
-#: ../qml/Main.qml:49
+#: ../qml/Main.qml:38 ../qml/RulesView.qml:33
+msgid "Gameplay rules"
+msgstr "Spielregeln"
+
+#: ../qml/Main.qml:61
 msgid "Play Game"
 msgstr "Spielen"
 
-#: ../qml/Main.qml:55
+#: ../qml/Main.qml:67
 msgid "Game Settings"
 msgstr "Einstellungen"
 
-#: ../qml/Main.qml:61
+#: ../qml/Main.qml:73
 msgid "About Farkle"
 msgstr "Über Farkle"
 
 #: ../qml/GameView.qml:65
 msgid "Farkle! Tap on any die to pass the turn."
-msgstr "Farkle! Klicke auf einen Würfel um den Zug zu beenden."
+msgstr "Farkle! Zugende. Weiter mit Klick auf einen Würfel."
 
 #: ../qml/GameView.qml:68
 msgid "Triple pair!"
@@ -103,3 +156,63 @@ msgstr "Auswahlen"
 #: ../qml/GameView.qml:284
 msgid "Leaderboard"
 msgstr "Punktstände"
+
+#: ../qml/RulesView.qml:37
+msgid ""
+"Farkle is a dice game in which the objective is to score as many points as "
+"possible. The number of turns is limited to an amount determined before the "
+"game begins."
+msgstr ""
+"Farkle ist ein Würfelspiel mit dem Ziel möglichst viele Punkte zu erreichen. "
+"Die Anzahl der Spielzüge wird vor Spielbeginn festgelegt."
+
+#: ../qml/RulesView.qml:39
+msgid "Players roll dice to score points in the following ways:"
+msgstr "Die Punkte werden nach den folgenden Regeln erwürfelt:"
+
+#: ../qml/RulesView.qml:41
+msgid ""
+"A 1 is worth 100 points A 5 is worth 50 points Three of the same number are "
+"worth 100 times the number, except three 1s which are worth 1000 points "
+"instead; these dice must come up on the same roll, not separate ones Each "
+"additional occurrence of a number beyond the first three increases the value "
+"of that set of dice by 100 times the number (the points obtained by rolling "
+"three copies of that number) Players roll 6 dice and may select any subset "
+"of those dice to score points. Those dice are removed from the pool and the "
+"player may roll the remaining dice to score more points. If at any point "
+"none of the rolled dice can score points, the turn is considered a <farkle> "
+"and the player forfeits all their points from that turn. A player must "
+"remove at least one scoring die from the pool to reroll. A player may choose "
+"to stop rolling and <bank> any points they have already accumulated rather "
+"than reroll. Note that the probability of farkling is greater if the pool is "
+"smaller. If a player removes all 6 dice from the pool without farkling, that "
+"player keeps all their points from that turn in hand, puts all 6 dice back "
+"in the pool, and may reroll following the same rules as before."
+msgstr ""
+"Eine 1 bringt 100 Punkte, eine 5 50 Punkte. Drei gleiche Zahlen sind die "
+"Zahl mal 100 Punkte wert, außer drei Einsen, die bringen 1.000 Punkte. Die "
+"Würfel müssen immer aus einem Wurf kommen, nicht aufeinander folgenden. "
+"Jedes weitere Vorkommen einer Zahl nach den ersten 3 erhöht den Wert um 100 "
+"mal die Punktzahl (die Punkte aus den drei gleichen Würfeln). Spieler werfen "
+"6 Würfel und können eine beliebige Anzahl wählen um Punkte zu erhalten. "
+"Diese Würfel werden von den verfügbaren Würfeln entfernt, die übrigen Würfel "
+"werden neu geworfen um weitere Punkte zu erreichen. Wenn keiner der Würfel "
+"Punkte bringt, ist der Wurf ein <Farkle>. Alle Punkte dieses Zuges "
+"verfallen. Ein Spieler muss immer mindestens einen Würfel für Punkte "
+"herausnehmen um weiterwürfeln zu können. Spieler können mit würfeln "
+"aufhöhren und die bisher gewürfelten Punkte auf das Punktekonto legen. "
+"Beachte, dass die Wahrscheinlichkeit für einen Farkle größer ist, je weniger "
+"Würfel verfügbar sind. Wenn ein Spieler alle 6 Würfel für Punkte auswählt, "
+"behält er alle Punkte und bekommt alle 6 Würfel für den nächsten Wurf "
+"zurück. Er kann dann normal weiterwürfeln."
+
+#: ../qml/RulesView.qml:46
+msgid ""
+"For more details and example rolls, please refer to the README in the "
+"repository for this app's backend library: "
+msgstr ""
+"Für weitere Details und Beispielwürfelergebnisse schaue in die README-Datei "
+"im Repository für diese App: "
+
+#~ msgid "Game rules"
+#~ msgstr "Spielregeln"

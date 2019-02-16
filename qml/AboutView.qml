@@ -30,28 +30,28 @@ Rectangle {
 			spacing: margin
 
 			WrappingLabel {
-				text: "Farkle - written by Arc676/Alessandro Vinciguerra. Project available under GPLv3. Copyright 2018-9 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"
+				text: "Farkle - " +i18n.tr("written by Arc676/Alessandro Vinciguerra. Project available under") + " GPLv3. Copyright 2018-9 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"
 			}
 
 			WrappingLabel {
-				text: "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation (version 3)."
+				text: i18n.tr("This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation (version 3).")
 			}
 
 			WrappingLabel {
-				text: "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
+				text: i18n.tr("This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.")
 			}
 
 			WrappingLabel {
-				text: "For the full license text, visit the <a href='https://github.com/Arc676/Farkle-Linux'>repository</a> or the <a href='http://www.gnu.org/licenses/'>GNU licenses page</a>"
+				text: i18n.tr("For the full license text, visit the <a href='https://github.com/Arc676/Farkle-Linux'>repository</a> or the <a href='http://www.gnu.org/licenses/'>GNU licenses page</a>")
 			}
 
 			WrappingLabel {
-				text: "<a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0</a> assets"
+				text: "<a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0</a> " + i18n.tr("assets")
 				textSize: Label.Large
 			}
 
 			WrappingLabel {
-				text: "Application icon by <a href='http://www.freepik.com'>Freepik</a>"
+				text: i18n.tr("Application icon by <a href='http://www.freepik.com'>Freepik</a>")
 			}
 
 			/*WrappingLabel {
@@ -80,12 +80,12 @@ Rectangle {
 			}*/
 
 			WrappingLabel {
-				text: "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> assets"
+				text: "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> " + i18n.tr("assets")
 				textSize: Label.Large
 			}
 
 			WrappingLabel {
-				text: "Dice sprites by Arc676/Alessandro Vinciguerra"
+				text: i18n.tr("Dice sprites by Arc676/Alessandro Vinciguerra")
 			}
 		}
 	}
