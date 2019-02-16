@@ -35,10 +35,10 @@ MainView {
 
             Action {
                 iconName: "info"
-                text: i18n.tr("Gameplay rules")
+                text: i18n.tr("About Farkle")
 
                 onTriggered: {
-                    pageViewer.state = "RulesView"
+                    pageViewer.state = "AboutView"
                 }
             }
         ]
@@ -70,8 +70,8 @@ MainView {
 
 			Button {
 				id: aboutButton
-				text: i18n.tr("About Farkle")
-				onClicked: pageViewer.state = "AboutView"
+				text: i18n.tr("Gameplay rules")
+				onClicked: pageViewer.state = "RulesView"
 			}
 		}
 
