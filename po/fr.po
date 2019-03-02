@@ -181,7 +181,7 @@ msgstr "Pour plus de détails et des exemples, veulliez lire le README (en angla
 
 #: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
 msgid "Players: "
-msgstr "Jouers :"
+msgstr "Joueurs :"
 
 #: ../qml/SetupView.qml:47
 msgid "Fewer players"
