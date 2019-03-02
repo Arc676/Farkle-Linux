@@ -185,11 +185,11 @@ msgstr "Jouers :"
 
 #: ../qml/SetupView.qml:47
 msgid "Fewer players"
-msgstr "Moins de jouers"
+msgstr "Moins de joueurs"
 
 #: ../qml/SetupView.qml:58
 msgid "More players"
-msgstr "Plus de jouers"
+msgstr "Plus de joueurs"
 
 #: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
 msgid "Turns: "
