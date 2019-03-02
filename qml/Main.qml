@@ -30,18 +30,21 @@ MainView {
 		header: PageHeader {
 			id: header
 			title: i18n.tr('Farkle')
-            
-            trailingActionBar.actions: [
 
-            Action {
-                iconName: "info"
-                text: i18n.tr("About Farkle")
+			trailingActionBar.actions: [
+				Action {
+					iconName: "info"
+					text: i18n.tr("About Farkle")
 
-                onTriggered: {
-                    pageViewer.state = "AboutView"
-                }
-            }
-        ]
+					onTriggered: pageViewer.state = "AboutView"
+				},
+				Action {
+					iconName: "settings"
+					text: i18n.tr("Game Settings")
+
+					onTriggered: pageViewer.state = "SetupView"
+				}
+			]
 		}
 
 		Row {
@@ -60,12 +63,6 @@ MainView {
 				id: gameButton
 				text: i18n.tr("Play Game")
 				onClicked: pageViewer.state = "GameView"
-			}
-
-			Button {
-				id: setupButton
-				text: i18n.tr("Game Settings")
-				onClicked: pageViewer.state = "SetupView"
 			}
 
 			Button {

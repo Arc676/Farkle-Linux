@@ -20,7 +20,7 @@ import FarkleBackend 1.0
 
 Rectangle {
 	function dieTapped(index) {
-		if (!FarkleBackend.gameInProgress) {
+		if (!FarkleBackend.canTapDice()) {
 			return
 		}
 		var dice = [die1, die2, die3, die4, die5, die6]
@@ -50,6 +50,14 @@ Rectangle {
 				default:
 					break;
 			}
+		}
+	}
+
+	function resetDice() {
+		var dice = [die1, die2, die3, die4, die5, die6]
+		for (var i = 1; i <= 6; i++) {
+			dice[i - 1].color = "#ffffff"
+			dice[i - 1].die.source = "dice/" + i + ".png"
 		}
 	}
 
@@ -105,6 +113,7 @@ Rectangle {
 				turnLabel.text = i18n.tr("No game in progress")
 				rollButton.text = i18n.tr("New Game")
 				rollButton.enabled = true
+				resetDice()
 			}
 		}
 	}

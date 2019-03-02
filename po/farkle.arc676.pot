@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-17 11:17+0000\n"
+"POT-Creation-Date: 2019-03-02 10:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,30 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
-msgid "Players: "
-msgstr ""
-
-#: ../qml/SetupView.qml:47
-msgid "Fewer players"
-msgstr ""
-
-#: ../qml/SetupView.qml:58
-msgid "More players"
-msgstr ""
-
-#: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
-msgid "Turns: "
-msgstr ""
-
-#: ../qml/SetupView.qml:78
-msgid "Fewer turns"
-msgstr ""
-
-#: ../qml/SetupView.qml:89
-msgid "More turns"
-msgstr ""
 
 #: ../qml/AboutView.qml:33
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
@@ -79,69 +55,69 @@ msgstr ""
 msgid "Dice sprites by Arc676/Alessandro Vinciguerra"
 msgstr ""
 
+#: ../qml/GameView.qml:73
+msgid "Farkle! Tap on any die to pass the turn."
+msgstr ""
+
+#: ../qml/GameView.qml:76
+msgid "Triple pair!"
+msgstr ""
+
+#: ../qml/GameView.qml:79
+msgid "Straight!"
+msgstr ""
+
+#: ../qml/GameView.qml:90 ../qml/GameView.qml:92 ../qml/GameView.qml:105
+#: ../qml/GameView.qml:246
+msgid "Bank"
+msgstr ""
+
+#: ../qml/GameView.qml:107
+msgid "%1's turn %2 of %3. Score: %4"
+msgstr ""
+
+#: ../qml/GameView.qml:113 ../qml/GameView.qml:128
+msgid "No game in progress"
+msgstr ""
+
+#: ../qml/GameView.qml:114 ../qml/GameView.qml:211
+msgid "New Game"
+msgstr ""
+
+#: ../qml/GameView.qml:224
+msgid "Roll"
+msgstr ""
+
+#: ../qml/GameView.qml:232
+msgid "Confirm selection"
+msgstr ""
+
+#: ../qml/GameView.qml:260
+msgid "Selections"
+msgstr ""
+
+#: ../qml/GameView.qml:293
+msgid "Leaderboard"
+msgstr ""
+
 #: ../qml/Main.qml:32 farkle.desktop.in.h:1
 msgid "Farkle"
 msgstr ""
 
-#: ../qml/Main.qml:38
+#: ../qml/Main.qml:37
 msgid "About Farkle"
 msgstr ""
 
-#: ../qml/Main.qml:61
-msgid "Play Game"
-msgstr ""
-
-#: ../qml/Main.qml:67
+#: ../qml/Main.qml:43
 msgid "Game Settings"
 msgstr ""
 
-#: ../qml/Main.qml:73 ../qml/RulesView.qml:33
+#: ../qml/Main.qml:64
+msgid "Play Game"
+msgstr ""
+
+#: ../qml/Main.qml:70 ../qml/RulesView.qml:33
 msgid "Gameplay rules"
-msgstr ""
-
-#: ../qml/GameView.qml:65
-msgid "Farkle! Tap on any die to pass the turn."
-msgstr ""
-
-#: ../qml/GameView.qml:68
-msgid "Triple pair!"
-msgstr ""
-
-#: ../qml/GameView.qml:71
-msgid "Straight!"
-msgstr ""
-
-#: ../qml/GameView.qml:82 ../qml/GameView.qml:84 ../qml/GameView.qml:97
-#: ../qml/GameView.qml:237
-msgid "Bank"
-msgstr ""
-
-#: ../qml/GameView.qml:99
-msgid "%1's turn %2 of %3. Score: %4"
-msgstr ""
-
-#: ../qml/GameView.qml:105 ../qml/GameView.qml:119
-msgid "No game in progress"
-msgstr ""
-
-#: ../qml/GameView.qml:106 ../qml/GameView.qml:202
-msgid "New Game"
-msgstr ""
-
-#: ../qml/GameView.qml:215
-msgid "Roll"
-msgstr ""
-
-#: ../qml/GameView.qml:223
-msgid "Confirm selection"
-msgstr ""
-
-#: ../qml/GameView.qml:251
-msgid "Selections"
-msgstr ""
-
-#: ../qml/GameView.qml:284
-msgid "Leaderboard"
 msgstr ""
 
 #: ../qml/RulesView.qml:37
@@ -180,4 +156,28 @@ msgstr ""
 msgid ""
 "For more details and example rolls, please refer to the README in the "
 "repository for this app's backend library: "
+msgstr ""
+
+#: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
+msgid "Players: "
+msgstr ""
+
+#: ../qml/SetupView.qml:47
+msgid "Fewer players"
+msgstr ""
+
+#: ../qml/SetupView.qml:58
+msgid "More players"
+msgstr ""
+
+#: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
+msgid "Turns: "
+msgstr ""
+
+#: ../qml/SetupView.qml:78
+msgid "Fewer turns"
+msgstr ""
+
+#: ../qml/SetupView.qml:89
+msgid "More turns"
 msgstr ""

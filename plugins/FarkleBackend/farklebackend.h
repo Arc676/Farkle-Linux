@@ -169,6 +169,13 @@ public:
 	Q_INVOKABLE void endTurn();
 
 	/**
+	 * Determines whether the game is in a state such that dice
+	 * can be tapped
+	 * @return Whether tapping the dice should have any effect
+	 */
+	Q_INVOKABLE bool canTapDice();
+
+	/**
 	 * Prepares the game for the given state
 	 * @param state The game's new state
 	 */

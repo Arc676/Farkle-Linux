@@ -188,3 +188,7 @@ int FarkleBackend::getCurrentPlayerScore() {
 FarkleBackend::RollTypeQ FarkleBackend::getRollType() {
 	return (RollTypeQ)rollType;
 }
+
+bool FarkleBackend::canTapDice() {
+	return gameInProgress && (state & (PICKING | TURN_ENDED));
+}
