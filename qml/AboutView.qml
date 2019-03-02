@@ -46,7 +46,7 @@ Rectangle {
 			}
 
 			WrappingLabel {
-				text: "<a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0</a> " + i18n.tr("assets")
+				text: i18n.tr("%1 assets").arg("<a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0</a>")
 				textSize: Label.Large
 			}
 
@@ -80,7 +80,7 @@ Rectangle {
 			}*/
 
 			WrappingLabel {
-				text: "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> " + i18n.tr("assets")
+				text: i18n.tr("%1 assets").arg("<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>")
 				textSize: Label.Large
 			}
 
