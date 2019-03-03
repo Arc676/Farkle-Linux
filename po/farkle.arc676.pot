@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-02 10:10+0000\n"
+"POT-Creation-Date: 2019-03-02 11:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgid ""
 msgstr ""
 
 #: ../qml/AboutView.qml:49 ../qml/AboutView.qml:83
-msgid "assets"
+msgid "%1 assets"
 msgstr ""
 
 #: ../qml/AboutView.qml:54
@@ -148,8 +148,8 @@ msgid ""
 "than reroll. Note that the probability of farkling is greater if the pool is "
 "smaller. If a player removes all 6 dice from the pool without farkling, that "
 "player keeps all their points from that turn in hand, puts all 6 dice back "
-"in the pool, and may reroll following the same rules as before. If you have "
-"triple pairs that is worth 2000 points."
+"in the pool, and may reroll following the same rules as before. A triple "
+"pair is worth 2000 points. A straight is worth 3000 points."
 msgstr ""
 
 #: ../qml/RulesView.qml:46
