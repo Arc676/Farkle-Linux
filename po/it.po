@@ -1,34 +1,33 @@
-# French translation for Farkle.
+# Italian translation for Farkle
 # Copyright (C) 2019
 # This file is distributed under the same license as the farkle.arc676 package.
-# Anne 017 <anneonyme017@openmailbox.org>, 2019.
-# Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>, 2019
+# Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com> 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 11:18+0000\n"
-"PO-Revision-Date: 2019-03-02 12:30+0100\n"
+"POT-Creation-Date: 2019-03-02 10:10+0000\n"
+"PO-Revision-Date: 2019-03-02 14:19+0100\n"
 "Last-Translator: Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>\n"
-"Language-Team: UBports French Team\n"
-"Language: fr\n"
+"Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../qml/AboutView.qml:33
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
-msgstr "programmation par Arc676/Alessandro Vinciguerra. Projet disponible suivant"
+msgstr "programmazione fatto da Arc676/Alessandro Vinciguerra. Progetto disponibile secondo le condizioni di"
 
 #: ../qml/AboutView.qml:37
 msgid ""
 "This program is free software: you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation (version 3)."
-msgstr "Ce programme est un logiciel libre ; vous pouvez le redistribuer ou le modifier "
-"suivant les termes de la GNU General Public License telle que publiée par la "
-"Free Software Foundation (la version 3)."
+msgstr "Questo programma è software libero: può ridistribuirlo e/o modificarlo "
+"seguendo le condizioni della GNU General Public License pubblicata dalla Free "
+"Software Foundation (versione 3)."
 
 #: ../qml/AboutView.qml:41
 msgid ""
@@ -36,75 +35,77 @@ msgid ""
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
 "more details."
-msgstr "Ce programme est distribué dans l’espoir qu’il sera utile, mais SANS AUCUNE "
-"GARANTIE : sans même la garantie implicite de COMMERCIALISABILITÉ "
-"ni d’ADÉQUATION À UN OBJECTIF PARTICULIER. Consultez la GNU General Public License pour plus de détails."
+msgstr "Questo programma è distribuito con la speranza che possa essere utile, ma SENZA "
+"ALCUNA garanzie; neanche la garanzia implicita di COMMERCIABILITÀ o "
+"di essere ADEGUATO PER UNO SCOPO PARTICOLARE. Consultare la GNU General Public License "
+"per ulteriori dettagli."
 
 #: ../qml/AboutView.qml:45
 msgid ""
 "For the full license text, visit the <a href='https://github.com/Arc676/"
 "Farkle-Linux'>repository</a> or the <a href='http://www.gnu.org/"
 "licenses/'>GNU licenses page</a>"
-msgstr "Pour le texte complète de la license (en anglais), visitez la <a href='https://github.com/Arc676/"
-"Farkle-Linux'>dépositoire</a> ou la <a href='http://www.gnu.org/"
-"licenses/'>page licenses GNU</a>"
+msgstr ""
+"Per il testo completo della licenza visita la pagina del <a href='https://github.com/Arc676/"
+"Farkle-Linux'>ripostiglio</a> o la <a href='http://www.gnu.org/"
+"licenses/'>pagina licenze della GNU</a>"
 
 #: ../qml/AboutView.qml:49 ../qml/AboutView.qml:83
 msgid "%1 assets"
-msgstr "Ressources %1"
+msgstr "Risorse %1"
 
 #: ../qml/AboutView.qml:54
 msgid "Application icon by <a href='http://www.freepik.com'>Freepik</a>"
-msgstr "Icône application par <a href='http://www.freepik.com'>Freepik</a>"
+msgstr "Icona applicazione da <a href='http://www.freepik.com'>Freepik</a>"
 
 #: ../qml/AboutView.qml:88
 msgid "Dice sprites by Arc676/Alessandro Vinciguerra"
-msgstr "Sprites dés par Arc676/Alessandro Vinciguerra"
+msgstr "Sprites dadi da Arc676/Alessandro Vinciguerra"
 
 #: ../qml/GameView.qml:73
 msgid "Farkle! Tap on any die to pass the turn."
-msgstr "Farkle ! Appuyez sur un dé pour passer le tour."
+msgstr "Farkle! Clicca su un dado per terminare il turno."
 
 #: ../qml/GameView.qml:76
 msgid "Triple pair!"
-msgstr "Triple paire !"
+msgstr "Tre paia!"
 
 #: ../qml/GameView.qml:79
 msgid "Straight!"
-msgstr "Suite !"
+msgstr "Scala!"
 
 #: ../qml/GameView.qml:90 ../qml/GameView.qml:92 ../qml/GameView.qml:105
 #: ../qml/GameView.qml:246
 msgid "Bank"
-msgstr "Banque"
+msgstr "In banca"
 
 #: ../qml/GameView.qml:107
 msgid "%1's turn %2 of %3. Score: %4"
-msgstr "Tour %2 sur %3 de %1. Score : %4"
+msgstr "Turno %2 su %3 di %1. Punteggio: %4"
 
 #: ../qml/GameView.qml:113 ../qml/GameView.qml:128
 msgid "No game in progress"
-msgstr "Aucune partie en cours"
+msgstr "Nessun gioco in corso"
 
 #: ../qml/GameView.qml:114 ../qml/GameView.qml:211
 msgid "New Game"
-msgstr "Nouvelle partie"
+msgstr "Nuova Partita"
 
 #: ../qml/GameView.qml:224
 msgid "Roll"
-msgstr "Lancer"
+msgstr "Lancia"
 
 #: ../qml/GameView.qml:232
 msgid "Confirm selection"
-msgstr "Confirmer la sélection"
+msgstr "Confermare selezione"
 
 #: ../qml/GameView.qml:260
 msgid "Selections"
-msgstr "Sélections"
+msgstr "Selezioni"
 
 #: ../qml/GameView.qml:293
 msgid "Leaderboard"
-msgstr "Classement"
+msgstr "Classifica"
 
 #: ../qml/Main.qml:32 farkle.desktop.in.h:1
 msgid "Farkle"
@@ -112,31 +113,31 @@ msgstr "Farkle"
 
 #: ../qml/Main.qml:37
 msgid "About Farkle"
-msgstr "À propos de Farkle"
+msgstr "Riguardo Farkle"
 
 #: ../qml/Main.qml:43
 msgid "Game Settings"
-msgstr "Paramètres de jeu"
+msgstr "Impostazioni di Gioco"
 
 #: ../qml/Main.qml:64
 msgid "Play Game"
-msgstr "Jouer"
+msgstr "Giocare"
 
 #: ../qml/Main.qml:70 ../qml/RulesView.qml:33
 msgid "Gameplay rules"
-msgstr "Règles du jeu"
+msgstr "Regole del Gioco"
 
 #: ../qml/RulesView.qml:37
 msgid ""
 "Farkle is a dice game in which the objective is to score as many points as "
 "possible. The number of turns is limited to an amount determined before the "
 "game begins."
-msgstr "Farkle est un jeu dans lequel l'objectif est de gagner le plus de "
-"points possible. Le nombre de tours est décidé avant de commencer à jouer."
+msgstr "Farkle è un gioco di dadi in cui l'obbiettivo è di ottenere più punti "
+"possibile. Il numero di turni è determinato prima dell'inizio del gioco."
 
 #: ../qml/RulesView.qml:39
 msgid "Players roll dice to score points in the following ways:"
-msgstr "Les joueurs lancent les dés pour gagner des points de cette manière :"
+msgstr "I giocatori lanciano dei dadi per ottenere punti nei seguenti modi:"
 
 #: ../qml/RulesView.qml:41
 msgid ""
@@ -157,48 +158,50 @@ msgid ""
 "player keeps all their points from that turn in hand, puts all 6 dice back "
 "in the pool, and may reroll following the same rules as before. A triple "
 "pair is worth 2000 points. A straight is worth 3000 points."
-msgstr "Un 1 vaut 100 points. Un 5 vaut 50 points. Trois du même nombre "
-"valent 100 fois le nombre, sauf trois 1 qui valent 1000 points. "
-"Il faut que ces dés apparaissent dans le même jet de dés et pas des jets separés. Chaque "
-"occurrence d'un nombre après les premières trois élève le valeur de ces dés de "
-"100 fois le nombre (les points obtenus avec 3 copies du nombre). Les joueurs lancent 6 dés "
-"et peuvent sélectionner n'importe quels dés pour gagner des points. On enlève ces dés "
-"et le joueur peut lancer les dés restants pour gagner plus de points. S'il n'y a aucun dé "
-"avec valeur, le tour s'appelle 'Farkle' et le joueur pert tous les points de ce tour. Un "
-"joueur doit sélectionner au moins un dé avec valeur pour pouvoir lancer une autre fois. Un "
-"joueur peut décider d'arrêter de lancer et de tenir les points déjà accumulés au lieu de "
-"lancer une autre fois. Remarquez que la probabilité d'un Farkle est plus élevée quand "
-"on lance moins de dés. Si un joueur enlève tous les 6 dés sans un Farkle, il peut remettre tous "
-"les 6 dés et continuer à lancer suivant les mêmes règles. Un triple paire vaut 2000 points. "
-"Une suite vaut 3000 points."
+msgstr "Un 1 vale 100 punti. Un 5 vale 50 punti. Tre volte lo stesso numero "
+"vale 100 volte quella cifra, tranne tre volte 1 che valgono 1000 punti. "
+"Questi dadi devono risultare nello stesso lancio, non lanci separati. Ogni "
+"copia di un numero oltre le prime tre aumenta il valore di quel gruppo di dadi "
+"di 100 volte quella cifra (i punti ottenuti da tre copie dello stesso numero). "
+"I giocatori lanciano 6 dadi e possono selezionare qualsiasi numero di dadi per "
+"guadagnare dei punti. Questi dadi vengono rimossi e il giocatore può decidere di "
+"lanciare i dadi rimanenti per guadagnare ulteriori punti. Se a qualsiasi punto nessun "
+"dado lanciato vale dei punti, il turno viene chiamato 'Farkle' e il giocatore "
+"perde tutti i punti di quel turno. Un giocatore deve selezionare almeno un dado "
+"di valore per poter lanciare un'altra volta. Un giocatore può decidere di smettere di "
+"lanciare e mettere in banca i punti già accumulati durante questo turno invece di "
+"lanciare un'altra volta. Nota che la probabilità di un Farkle aumenta quando vengono "
+"lanciati meno dadi. Se un giocatore rimuove tutti i 6 dadi senza un Farkle, può "
+"rimettere indietro tutti i dadi e continuare a lanciare seguendo le stesse regole. Tre "
+"paia di numeri valgono 2.000 punti. Una scala da 1 a 6 vale 3.000 punti."
 
 #: ../qml/RulesView.qml:46
 msgid ""
 "For more details and example rolls, please refer to the README in the "
 "repository for this app's backend library: "
-msgstr "Pour plus de détails et des exemples, veulliez lire le README (en anglais) "
-"de la dépositoire de la bibliothèque de ce jeu : "
+msgstr "Per più dettagli e esempi, consultare il README (in inglese) del "
+"ripostiglio della biblioteca di questa app: "
 
 #: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
 msgid "Players: "
-msgstr "Joueurs : "
+msgstr "Giocatori: "
 
 #: ../qml/SetupView.qml:47
 msgid "Fewer players"
-msgstr "Moins de jouers"
+msgstr "Meno giocatori"
 
 #: ../qml/SetupView.qml:58
 msgid "More players"
-msgstr "Plus de jouers"
+msgstr "Più giocatori"
 
 #: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
 msgid "Turns: "
-msgstr "Tours :"
+msgstr "Turni: "
 
 #: ../qml/SetupView.qml:78
 msgid "Fewer turns"
-msgstr "Moins de tours"
+msgstr "Meno turni"
 
 #: ../qml/SetupView.qml:89
 msgid "More turns"
-msgstr "Plus de tours"
+msgstr "Più turni"
