@@ -132,7 +132,7 @@ msgid ""
 "possible. The number of turns is limited to an amount determined before the "
 "game begins."
 msgstr "Farkle est un jeu dans lequel l'objectif est de gagner le plus de "
-"points possible. Le nombre de tours est décidé avant de commencer à joueur."
+"points possible. Le nombre de tours est décidé avant de commencer à jouer."
 
 #: ../qml/RulesView.qml:39
 msgid "Players roll dice to score points in the following ways:"
