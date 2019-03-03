@@ -132,11 +132,11 @@ msgid ""
 "possible. The number of turns is limited to an amount determined before the "
 "game begins."
 msgstr "Farkle est un jeu dans lequel l'objectif est de gagner le plus de "
-"points possible. Le nombre de tours est décidé avant de commencer à jouer."
+"points possible. Le nombre de tours est décidé avant de commencer à joueur."
 
 #: ../qml/RulesView.qml:39
 msgid "Players roll dice to score points in the following ways:"
-msgstr "Les jouers lancent les dés pour gagner des points de ces façons :"
+msgstr "Les joueurs lancent les dés pour gagner des points de cette manière :"
 
 #: ../qml/RulesView.qml:41
 msgid ""
@@ -158,17 +158,17 @@ msgid ""
 "in the pool, and may reroll following the same rules as before. A triple "
 "pair is worth 2000 points. A straight is worth 3000 points."
 msgstr "Un 1 vaut 100 points. Un 5 vaut 50 points. Trois du même nombre "
-"valant 100 fois le nombre, sauf trois 1 qui valant 1000 points. "
+"valent 100 fois le nombre, sauf trois 1 qui valent 1000 points. "
 "Il faut que ces dés apparaissent dans le même jet de dés et pas des jets separés. Chaque "
 "occurrence d'un nombre après les premières trois élève le valeur de ces dés de "
-"100 fois le nombre (les points obtenus avec 3 copies du nombre). Les jouers lancent 6 dés "
+"100 fois le nombre (les points obtenus avec 3 copies du nombre). Les joueurs lancent 6 dés "
 "et peuvent sélectionner n'importe quels dés pour gagner des points. On enlève ces dés "
-"et le jouer peut lancer les dés restants pour gagner plus de points. S'il n'y a aucun dé "
-"avec valeur, le tour s'appelle 'Farkle' et le jouer pert tous les points de ce tour. Un "
-"jouer doit sélectionner au moins un dé avec valeur pour pouvoir lancer une autre fois. Un "
-"jouer peut décider d'arrêter de lancer et de tenir les points déjà accumulés au lieu de "
+"et le joueur peut lancer les dés restants pour gagner plus de points. S'il n'y a aucun dé "
+"avec valeur, le tour s'appelle 'Farkle' et le joueur pert tous les points de ce tour. Un "
+"joueur doit sélectionner au moins un dé avec valeur pour pouvoir lancer une autre fois. Un "
+"joueur peut décider d'arrêter de lancer et de tenir les points déjà accumulés au lieu de "
 "lancer une autre fois. Remarquez que la probabilité d'un Farkle est plus élevée quand "
-"on lance moins de dés. Si un jouer enlève tous les 6 dés sans un Farkle, il peut remettre tous "
+"on lance moins de dés. Si un joueur enlève tous les 6 dés sans un Farkle, il peut remettre tous "
 "les 6 dés et continuer à lancer suivant les mêmes règles. Un triple paire vaut 2000 points. "
 "Une suite vaut 3000 points."
 
@@ -181,7 +181,7 @@ msgstr "Pour plus de détails et des exemples, veulliez lire le README (en angla
 
 #: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
 msgid "Players: "
-msgstr "Joueurs :"
+msgstr "Joueurs : "
 
 #: ../qml/SetupView.qml:47
 msgid "Fewer players"
@@ -193,7 +193,7 @@ msgstr "Plus de joueurs"
 
 #: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
 msgid "Turns: "
-msgstr "Tours :"
+msgstr "Tours : "
 
 #: ../qml/SetupView.qml:78
 msgid "Fewer turns"
