@@ -64,7 +64,7 @@ void FarkleBackend::rollDice() {
 	case STRAIGHT:
 		emit rollStraight();
 	case TRIPLE_PAIR:
-		if (type != STRAIGHT) {
+		if (rollType != STRAIGHT) {
 			emit rollTPair();
 		}
 		updateSelectionValue(sel);

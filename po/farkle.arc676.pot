@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-02 11:41+0000\n"
+"POT-Creation-Date: 2019-03-05 20:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,52 +51,88 @@ msgstr ""
 msgid "Application icon by <a href='http://www.freepik.com'>Freepik</a>"
 msgstr ""
 
+#: ../qml/AboutView.qml:58
+msgid ""
+"<a href='https://freesound.org/people/kiddpark/sounds/201159/'>Bank sound "
+"effect</a> by kiddpark"
+msgstr ""
+
+#: ../qml/AboutView.qml:62
+msgid ""
+"<a href='https://freesound.org/people/grunz/sounds/109662/'>Triple Pair</a> "
+"and <a href='https://freesound.org/people/grunz/sounds/109663/'>Straight</a> "
+"sound effects by grunz"
+msgstr ""
+
+#: ../qml/AboutView.qml:66
+msgid ""
+"<a href='http://creativecommons.org/publicdomain/zero/1.0/'>CC0</a> assets"
+msgstr ""
+
+#: ../qml/AboutView.qml:71
+msgid ""
+"<a href='https://freesound.org/people/nettimato/sounds/353975/'>Dice rolling "
+"sounds</a> by nettimato"
+msgstr ""
+
+#: ../qml/AboutView.qml:75
+msgid ""
+"<a href='https://freesound.org/people/fins/sounds/171673/'>Farkle sound "
+"effect</a> by fins"
+msgstr ""
+
+#: ../qml/AboutView.qml:79
+msgid ""
+"<a href='https://freesound.org/people/KorgMS2000B/sounds/54405/'>Die "
+"selection ticking sound effect</a> by KorgMS2000B"
+msgstr ""
+
 #: ../qml/AboutView.qml:88
 msgid "Dice sprites by Arc676/Alessandro Vinciguerra"
 msgstr ""
 
-#: ../qml/GameView.qml:73
+#: ../qml/GameView.qml:75
 msgid "Farkle! Tap on any die to pass the turn."
 msgstr ""
 
-#: ../qml/GameView.qml:76
+#: ../qml/GameView.qml:78
 msgid "Triple pair!"
 msgstr ""
 
-#: ../qml/GameView.qml:79
+#: ../qml/GameView.qml:81
 msgid "Straight!"
 msgstr ""
 
-#: ../qml/GameView.qml:90 ../qml/GameView.qml:92 ../qml/GameView.qml:105
-#: ../qml/GameView.qml:246
+#: ../qml/GameView.qml:92 ../qml/GameView.qml:94 ../qml/GameView.qml:107
+#: ../qml/GameView.qml:255
 msgid "Bank"
 msgstr ""
 
-#: ../qml/GameView.qml:107
+#: ../qml/GameView.qml:109
 msgid "%1's turn %2 of %3. Score: %4"
 msgstr ""
 
-#: ../qml/GameView.qml:113 ../qml/GameView.qml:128
+#: ../qml/GameView.qml:115 ../qml/GameView.qml:136
 msgid "No game in progress"
 msgstr ""
 
-#: ../qml/GameView.qml:114 ../qml/GameView.qml:211
+#: ../qml/GameView.qml:116 ../qml/GameView.qml:219
 msgid "New Game"
 msgstr ""
 
-#: ../qml/GameView.qml:224
+#: ../qml/GameView.qml:233
 msgid "Roll"
 msgstr ""
 
-#: ../qml/GameView.qml:232
+#: ../qml/GameView.qml:241
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/GameView.qml:260
+#: ../qml/GameView.qml:272
 msgid "Selections"
 msgstr ""
 
-#: ../qml/GameView.qml:293
+#: ../qml/GameView.qml:305
 msgid "Leaderboard"
 msgstr ""
 

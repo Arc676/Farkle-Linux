@@ -54,30 +54,30 @@ Rectangle {
 				text: i18n.tr("Application icon by <a href='http://www.freepik.com'>Freepik</a>")
 			}
 
-			/*WrappingLabel {
-				text: "<a href='https://freesound.org/people/kiddpark/sounds/201159/'>Bank sound effect</a> by kiddpark"
+			WrappingLabel {
+				text: i18n.tr("<a href='https://freesound.org/people/kiddpark/sounds/201159/'>Bank sound effect</a> by kiddpark")
 			}
 
 			WrappingLabel {
-				text: "<a href='https://freesound.org/people/grunz/sounds/109662/'>Triple Pair</a> and <a href='https://freesound.org/people/grunz/sounds/109663/'>Straight</a> sound effects by grunz"
+				text: i18n.tr("<a href='https://freesound.org/people/grunz/sounds/109662/'>Triple Pair</a> and <a href='https://freesound.org/people/grunz/sounds/109663/'>Straight</a> sound effects by grunz")
 			}
 
 			WrappingLabel {
-				text: "<a href='http://creativecommons.org/publicdomain/zero/1.0/'>CC0</a> assets"
+				text: i18n.tr("<a href='http://creativecommons.org/publicdomain/zero/1.0/'>CC0</a> assets")
 				textSize: Label.Large
 			}
 
 			WrappingLabel {
-				text: "<a href='https://freesound.org/people/nettimato/sounds/353975/'>Dice rolling sounds</a> by nettimato"
+				text: i18n.tr("<a href='https://freesound.org/people/nettimato/sounds/353975/'>Dice rolling sounds</a> by nettimato")
 			}
 
 			WrappingLabel {
-				text: "<a href='https://freesound.org/people/fins/sounds/171673/'>Farkle sound effect</a> by fins"
+				text: i18n.tr("<a href='https://freesound.org/people/fins/sounds/171673/'>Farkle sound effect</a> by fins")
 			}
 
 			WrappingLabel {
-				text: "<a href='https://freesound.org/people/KorgMS2000B/sounds/54405/'>Die selection ticking sound effect</a> by KorgMS2000B"
-			}*/
+				text: i18n.tr("<a href='https://freesound.org/people/KorgMS2000B/sounds/54405/'>Die selection ticking sound effect</a> by KorgMS2000B")
+			}
 
 			WrappingLabel {
 				text: i18n.tr("%1 assets").arg("<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>")

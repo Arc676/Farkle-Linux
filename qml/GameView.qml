@@ -335,7 +335,7 @@ Rectangle {
 
 	SoundEffect {
 		id: bankSFX
-		source: "sfx/bank.m4a"
+		source: "sfx/bank.ogg"
 	}
 
 	SoundEffect {
