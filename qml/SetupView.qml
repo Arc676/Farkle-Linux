@@ -22,6 +22,7 @@ Rectangle {
 
 	property int turnCount: 10
 	property int playerCount: 1
+	property bool areSFXEnabled: true
 
 	Column {
 		anchors {
@@ -92,6 +93,14 @@ Rectangle {
 					tCount.text = i18n.tr("Turns: ") + setupPage.turnCount
 				}
 			}
+		}
+
+		CheckBox {
+			id: enableSFX
+			text: i18n.tr("Enable sound effects")
+			checked: true
+
+			onClicked: areSFXEnabled = checked
 		}
 	}
 }

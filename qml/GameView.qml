@@ -20,6 +20,12 @@ import QtMultimedia 5.8
 import FarkleBackend 1.0
 
 Rectangle {
+	function playSound(sfx) {
+		if (setup.areSFXEnabled) {
+			sfx.play()
+		}
+	}
+
 	function dieTapped(index) {
 		if (!FarkleBackend.canTapDice()) {
 			return
@@ -30,7 +36,7 @@ Rectangle {
 		} else {
 			FarkleBackend.toggle(index)
 			updateDie(dice[index], index)
-			tickSFX.play()
+			playSound(tickSFX)
 		}
 	}
 
@@ -119,11 +125,11 @@ Rectangle {
 			}
 		}
 
-		onRollFarkle: farkleSFX.play()
+		onRollFarkle: playSound(farkleSFX)
 
-		onRollTPair: tpairSFX.play()
+		onRollTPair: playSound(tpairSFX)
 
-		onRollStraight: straightSFX.play()
+		onRollStraight: playSound(straightSFX)
 	}
 
 	id: gamePage
@@ -226,7 +232,7 @@ Rectangle {
 			onClicked: {
 				if (FarkleBackend.gameInProgress) {
 					FarkleBackend.rollDice();
-					rollSFX.play()
+					playSound(rollSFX)
 				} else {
 					FarkleBackend.startGame(setup.playerCount, setup.turnCount)
 					leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
@@ -262,7 +268,7 @@ Rectangle {
 			}
 			onClicked: {
 				FarkleBackend.bank()
-				bankSFX.play()
+				playSound(bankSFX)
 			}
 		}
 

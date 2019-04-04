@@ -202,3 +202,7 @@ msgstr "Moins de tours"
 #: ../qml/SetupView.qml:89
 msgid "More turns"
 msgstr "Plus de tours"
+
+#: ../qml/SetupView.qml:100
+msgid "Enable sound effects"
+msgstr "Activer effets sonores"

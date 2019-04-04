@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-04 21:03+0000\n"
+"POT-Creation-Date: 2019-04-04 21:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,48 +91,48 @@ msgstr ""
 msgid "Dice sprites by Arc676/Alessandro Vinciguerra"
 msgstr ""
 
-#: ../qml/GameView.qml:75
+#: ../qml/GameView.qml:81
 msgid "Farkle! Tap on any die to pass the turn."
 msgstr ""
 
-#: ../qml/GameView.qml:78
+#: ../qml/GameView.qml:84
 msgid "Triple pair!"
 msgstr ""
 
-#: ../qml/GameView.qml:81
+#: ../qml/GameView.qml:87
 msgid "Straight!"
 msgstr ""
 
-#: ../qml/GameView.qml:92 ../qml/GameView.qml:94 ../qml/GameView.qml:107
-#: ../qml/GameView.qml:255
+#: ../qml/GameView.qml:98 ../qml/GameView.qml:100 ../qml/GameView.qml:113
+#: ../qml/GameView.qml:261
 msgid "Bank"
 msgstr ""
 
-#: ../qml/GameView.qml:109
+#: ../qml/GameView.qml:115
 msgid "%1's turn %2 of %3. Score: %4"
 msgstr ""
 
-#: ../qml/GameView.qml:115 ../qml/GameView.qml:136
+#: ../qml/GameView.qml:121 ../qml/GameView.qml:142
 msgid "No game in progress"
 msgstr ""
 
-#: ../qml/GameView.qml:116 ../qml/GameView.qml:219
+#: ../qml/GameView.qml:122 ../qml/GameView.qml:225
 msgid "New Game"
 msgstr ""
 
-#: ../qml/GameView.qml:233
+#: ../qml/GameView.qml:239
 msgid "Roll"
 msgstr ""
 
-#: ../qml/GameView.qml:241
+#: ../qml/GameView.qml:247
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/GameView.qml:272
+#: ../qml/GameView.qml:278
 msgid "Selections"
 msgstr ""
 
-#: ../qml/GameView.qml:305
+#: ../qml/GameView.qml:311
 msgid "Leaderboard"
 msgstr ""
 
@@ -194,26 +194,30 @@ msgid ""
 "repository for this app's backend library: "
 msgstr ""
 
-#: ../qml/SetupView.qml:37 ../qml/SetupView.qml:51 ../qml/SetupView.qml:61
+#: ../qml/SetupView.qml:38 ../qml/SetupView.qml:52 ../qml/SetupView.qml:62
 msgid "Players: "
 msgstr ""
 
-#: ../qml/SetupView.qml:47
+#: ../qml/SetupView.qml:48
 msgid "Fewer players"
 msgstr ""
 
-#: ../qml/SetupView.qml:58
+#: ../qml/SetupView.qml:59
 msgid "More players"
 msgstr ""
 
-#: ../qml/SetupView.qml:68 ../qml/SetupView.qml:82 ../qml/SetupView.qml:92
+#: ../qml/SetupView.qml:69 ../qml/SetupView.qml:83 ../qml/SetupView.qml:93
 msgid "Turns: "
 msgstr ""
 
-#: ../qml/SetupView.qml:78
+#: ../qml/SetupView.qml:79
 msgid "Fewer turns"
 msgstr ""
 
-#: ../qml/SetupView.qml:89
+#: ../qml/SetupView.qml:90
 msgid "More turns"
+msgstr ""
+
+#: ../qml/SetupView.qml:100
+msgid "Enable sound effects"
 msgstr ""

@@ -216,5 +216,6 @@ msgstr ""
 "Für weitere Details und Beispielwürfelergebnisse schaue in die README-Datei "
 "im Repository für diese App: "
 
-#~ msgid "Game rules"
-#~ msgstr "Spielregeln"
+#: ../qml/SetupView.qml:100
+msgid "Enable sound effects"
+msgstr "Soundeffekte anschalten"
