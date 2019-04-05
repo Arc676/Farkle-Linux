@@ -26,114 +26,30 @@ MainView {
 	height: units.gu(75)
 	property real margin: units.gu(2)
 
-	Page {
-		header: PageHeader {
-			id: header
-			title: i18n.tr('Farkle')
+	PageStack {
+		id: pageViewer
+		anchors.fill: parent
 
-			trailingActionBar.actions: [
-				Action {
-					iconName: "info"
-					text: i18n.tr("About Farkle")
-
-					onTriggered: pageViewer.state = "AboutView"
-				},
-				Action {
-					iconName: "settings"
-					text: i18n.tr("Game Settings")
-
-					onTriggered: pageViewer.state = "SetupView"
-				}
-			]
+		property SetupView setupPage: SetupView {
+			visible: false
 		}
 
-		Row {
-			id: navRow
-			anchors {
-				top: header.bottom
-				topMargin: margin
-				left: parent.left
-				leftMargin: margin
-				right: parent.right
-				rightMargin: margin
-			}
-			spacing: margin
-
-			Button {
-				id: gameButton
-				text: i18n.tr("Play Game")
-				onClicked: pageViewer.state = "GameView"
-			}
-
-			Button {
-				id: aboutButton
-				text: i18n.tr("Gameplay rules")
-				onClicked: pageViewer.state = "RulesView"
-			}
+		property GameView gamePage: GameView {
+			setup: pageViewer.setupPage
+			visible: false
 		}
 
-		Rectangle {
-			id: pageViewer
-			anchors {
-				top: navRow.bottom
-				left: parent.left
-				right: parent.right
-				bottom: parent.bottom
-			}
-			
-			Component.onCompleted: state = "GameView"
+		property AboutView aboutPage: AboutView {
+			visible: false
+		}
+		
+		property RulesView rulesPage: RulesView {
+			visible: false
+		}
 
-			GameView {
-				id: gamePage
-				setup: setupPage
-				visible: false
-			}
-
-			SetupView {
-				id: setupPage
-				visible: false
-			}
-
-			AboutView {
-				id: aboutPage
-				visible: false
-			}
-			
-			RulesView {
-				id: rulesPage
-				visible: false
-			}
-
-			states: [
-				State {
-					name: "GameView"
-					PropertyChanges {
-						target: gamePage
-						visible: true
-					}
-				},
-				State {
-					name: "SetupView"
-					PropertyChanges {
-						target: setupPage
-						visible: true
-					}
-				},
-				State {
-					name: "AboutView"
-					PropertyChanges {
-						target: aboutPage
-						visible: true
-					}
-				},
-				State {
-					name: "RulesView"
-					PropertyChanges {
-						target: rulesPage
-						visible: true
-					}
-				}
-			]
+		Component.onCompleted: {
+			pageViewer.clear()
+			pageViewer.push(gamePage)
 		}
 	}
 }

@@ -16,9 +16,9 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
-Rectangle {
+Page {
 	id: setupPage
-	anchors.fill: parent
+	header: DefaultHeader {}
 
 	property int turnCount: 10
 	property int playerCount: 1
@@ -26,10 +26,13 @@ Rectangle {
 
 	Column {
 		anchors {
-			fill: parent
-			leftMargin: margin
-			rightMargin: margin
+			top: header.bottom
 			topMargin: margin
+			left: parent.left
+			leftMargin: margin
+			right: parent.right
+			rightMargin: margin
+			bottom: parent.bottom
 		}
 		spacing: margin
 

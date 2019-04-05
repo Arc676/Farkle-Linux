@@ -16,14 +16,21 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
-Rectangle {
+Page {
 	id: rulesPage
-	anchors.fill: parent
+	header: DefaultHeader {}
 
 	ScrollView {
 		id: scroll
-		anchors.fill: parent
-		anchors.topMargin: margin
+		anchors {
+			top: header.bottom
+			topMargin: margin
+			left: parent.left
+			leftMargin: margin
+			right: parent.right
+			rightMargin: margin
+			bottom: parent.bottom
+		}
 
 		Column {
 			width: scroll.width

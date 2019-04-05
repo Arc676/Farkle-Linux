@@ -19,7 +19,9 @@ import QtMultimedia 5.8
 
 import FarkleBackend 1.0
 
-Rectangle {
+Page {
+	header: DefaultHeader {}
+
 	function playSound(sfx) {
 		if (setup.areSFXEnabled) {
 			sfx.play()
@@ -141,7 +143,7 @@ Rectangle {
 		id: turnLabel
 		text: i18n.tr("No game in progress")
 		anchors {
-			top: parent.top
+			top: header.bottom
 			topMargin: margin
 			left: parent.left
 			leftMargin: margin
