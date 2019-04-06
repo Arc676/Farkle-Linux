@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-06 15:39+0000\n"
+"POT-Creation-Date: 2019-04-06 16:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,70 +92,86 @@ msgstr ""
 msgid "Dice sprites by Arc676/Alessandro Vinciguerra"
 msgstr ""
 
+#: ../qml/build/tmp/ConfirmDialog.qml:25 ../qml/ConfirmDialog.qml:25
+msgid "Are you sure you want to restart the game?"
+msgstr ""
+
+#: ../qml/build/tmp/ConfirmDialog.qml:29 ../qml/ConfirmDialog.qml:29
+msgid "Yes, restart"
+msgstr ""
+
+#: ../qml/build/tmp/ConfirmDialog.qml:38 ../qml/ConfirmDialog.qml:38
+msgid "No, keep playing"
+msgstr ""
+
 #: ../qml/build/tmp/DefaultHeader.qml:20 ../qml/DefaultHeader.qml:20
 #: farkle.desktop.in.h:1
 msgid "Farkle"
 msgstr ""
 
-#: ../qml/build/tmp/DefaultHeader.qml:27 ../qml/DefaultHeader.qml:41
-msgid "About Farkle"
-msgstr ""
-
-#: ../qml/build/tmp/DefaultHeader.qml:34 ../qml/DefaultHeader.qml:27
+#: ../qml/build/tmp/DefaultHeader.qml:27 ../qml/DefaultHeader.qml:27
 msgid "Game Settings"
 msgstr ""
 
-#: ../qml/build/tmp/DefaultHeader.qml:41 ../qml/build/tmp/RulesView.qml:40
+#: ../qml/build/tmp/DefaultHeader.qml:34 ../qml/DefaultHeader.qml:34
+msgid "Restart game"
+msgstr ""
+
+#: ../qml/build/tmp/DefaultHeader.qml:41 ../qml/DefaultHeader.qml:41
+msgid "About Farkle"
+msgstr ""
+
+#: ../qml/build/tmp/DefaultHeader.qml:48 ../qml/build/tmp/RulesView.qml:40
 #: ../qml/DefaultHeader.qml:48 ../qml/RulesView.qml:40
 msgid "Gameplay rules"
 msgstr ""
 
-#: ../qml/build/tmp/GameView.qml:83 ../qml/GameView.qml:96
-msgid "Farkle! Tap on any die to pass the turn."
-msgstr ""
-
-#: ../qml/build/tmp/GameView.qml:86 ../qml/GameView.qml:99
-msgid "Triple pair!"
-msgstr ""
-
-#: ../qml/build/tmp/GameView.qml:89 ../qml/GameView.qml:102
-msgid "Straight!"
-msgstr ""
-
-#: ../qml/build/tmp/GameView.qml:100 ../qml/build/tmp/GameView.qml:102
-#: ../qml/build/tmp/GameView.qml:115 ../qml/build/tmp/GameView.qml:263
-#: ../qml/GameView.qml:113 ../qml/GameView.qml:115 ../qml/GameView.qml:128
-#: ../qml/GameView.qml:274
-msgid "Bank"
-msgstr ""
-
-#: ../qml/build/tmp/GameView.qml:117 ../qml/GameView.qml:130
-msgid "%1's turn %2 of %3. Score: %4"
-msgstr ""
-
-#: ../qml/build/tmp/GameView.qml:123 ../qml/build/tmp/GameView.qml:144
-#: ../qml/GameView.qml:136 ../qml/GameView.qml:157
-msgid "No game in progress"
-msgstr ""
-
-#: ../qml/build/tmp/GameView.qml:124 ../qml/build/tmp/GameView.qml:227
-#: ../qml/GameView.qml:137 ../qml/GameView.qml:240
-msgid "New Game"
-msgstr ""
-
-#: ../qml/build/tmp/GameView.qml:241 ../qml/GameView.qml:84
+#: ../qml/build/tmp/GameView.qml:90 ../qml/GameView.qml:90
 msgid "Roll"
 msgstr ""
 
-#: ../qml/build/tmp/GameView.qml:249 ../qml/GameView.qml:260
+#: ../qml/build/tmp/GameView.qml:102 ../qml/GameView.qml:102
+msgid "Farkle! Tap on any die to pass the turn."
+msgstr ""
+
+#: ../qml/build/tmp/GameView.qml:105 ../qml/GameView.qml:105
+msgid "Triple pair!"
+msgstr ""
+
+#: ../qml/build/tmp/GameView.qml:108 ../qml/GameView.qml:108
+msgid "Straight!"
+msgstr ""
+
+#: ../qml/build/tmp/GameView.qml:119 ../qml/build/tmp/GameView.qml:121
+#: ../qml/build/tmp/GameView.qml:134 ../qml/build/tmp/GameView.qml:285
+#: ../qml/GameView.qml:119 ../qml/GameView.qml:121 ../qml/GameView.qml:134
+#: ../qml/GameView.qml:285
+msgid "Bank"
+msgstr ""
+
+#: ../qml/build/tmp/GameView.qml:136 ../qml/GameView.qml:136
+msgid "%1's turn %2 of %3. Score: %4"
+msgstr ""
+
+#: ../qml/build/tmp/GameView.qml:142 ../qml/build/tmp/GameView.qml:168
+#: ../qml/GameView.qml:142 ../qml/GameView.qml:168
+msgid "No game in progress"
+msgstr ""
+
+#: ../qml/build/tmp/GameView.qml:143 ../qml/build/tmp/GameView.qml:251
+#: ../qml/GameView.qml:143 ../qml/GameView.qml:251
+msgid "New Game"
+msgstr ""
+
+#: ../qml/build/tmp/GameView.qml:271 ../qml/GameView.qml:271
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/build/tmp/GameView.qml:280 ../qml/GameView.qml:291
+#: ../qml/build/tmp/GameView.qml:302 ../qml/GameView.qml:302
 msgid "Selections"
 msgstr ""
 
-#: ../qml/build/tmp/GameView.qml:313 ../qml/GameView.qml:324
+#: ../qml/build/tmp/GameView.qml:335 ../qml/GameView.qml:335
 msgid "Leaderboard"
 msgstr ""
 
@@ -227,8 +243,4 @@ msgstr ""
 
 #: ../qml/build/tmp/SetupView.qml:103 ../qml/SetupView.qml:103
 msgid "Enable sound effects"
-msgstr ""
-
-#: ../qml/DefaultHeader.qml:34
-msgid "Restart game"
 msgstr ""

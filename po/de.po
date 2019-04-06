@@ -223,3 +223,15 @@ msgstr "Soundeffekte anschalten"
 #: ../qml/DefaultHeader.qml:48
 msgid "Restart game"
 msgstr "Spiel neu starten"
+
+#: ../qml/build/tmp/ConfirmDialog.qml:25 ../qml/ConfirmDialog.qml:25
+msgid "Are you sure you want to restart the game?"
+msgstr "Sind Sie sicher, dass Sie das Spiel neu starten wollen?"
+
+#: ../qml/build/tmp/ConfirmDialog.qml:29 ../qml/ConfirmDialog.qml:29
+msgid "Yes, restart"
+msgstr "Ja, neu starten"
+
+#: ../qml/build/tmp/ConfirmDialog.qml:38 ../qml/ConfirmDialog.qml:38
+msgid "No, keep playing"
+msgstr "Nein, weiter spielen"

@@ -15,11 +15,17 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 import QtMultimedia 5.8
 
 import FarkleBackend 1.0
 
 Page {
+	id: gameViewPage
+	anchors.fill: parent
+
+	property SetupView setup
+
 	header: DefaultHeader {}
 
 	function playSound(sfx) {
@@ -74,8 +80,7 @@ Page {
 	}
 
 	function restartGame() {
-		// TODO: Add confirmation alert
-		startGame()
+		PopupUtils.open(confirmRestartNotif, gameViewPage, {})
 	}
 
 	function startGame() {
@@ -148,10 +153,15 @@ Page {
 		onRollStraight: playSound(straightSFX)
 	}
 
-	id: gameViewPage
-	anchors.fill: parent
+	Component {
+		id: confirmRestartNotif
 
-	property SetupView setup
+		ConfirmDialog {
+			onRestart: {
+				startGame()
+			}
+		}
+	}
 
 	Label {
 		id: turnLabel
