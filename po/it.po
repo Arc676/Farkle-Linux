@@ -209,3 +209,7 @@ msgstr "Più turni"
 #: ../qml/SetupView.qml:100
 msgid "Enable sound effects"
 msgstr "Attiva effetti sonori"
+
+#: ../qml/DefaultHeader.qml:48
+msgid "Restart game"
+msgstr "Ricominciare la partita"

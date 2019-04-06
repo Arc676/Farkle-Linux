@@ -64,11 +64,25 @@ Page {
 	}
 
 	function resetDice() {
+		feedbackLabel.text = ""
 		var dice = [die1, die2, die3, die4, die5, die6]
-		for (var i = 1; i <= 6; i++) {
-			dice[i - 1].color = "#ffffff"
-			dice[i - 1].die.source = "dice/" + i + ".png"
+		for (var i = 0; i < 6; i++) {
+			dice[i].color = "#ffffff"
+			dice[i].die.opacity = 1.0
+			dice[i].die.source = "dice/" + (i + 1) + ".png"
 		}
+	}
+
+	function restartGame() {
+		// TODO: Add confirmation alert
+		startGame()
+	}
+
+	function startGame() {
+		resetDice()
+		FarkleBackend.startGame(setup.playerCount, setup.turnCount)
+		leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
+		rollButton.text = i18n.tr('Roll')
 	}
 
 	Connections {
@@ -134,7 +148,7 @@ Page {
 		onRollStraight: playSound(straightSFX)
 	}
 
-	id: gamePage
+	id: gameViewPage
 	anchors.fill: parent
 
 	property SetupView setup
@@ -236,9 +250,7 @@ Page {
 					FarkleBackend.rollDice();
 					playSound(rollSFX)
 				} else {
-					FarkleBackend.startGame(setup.playerCount, setup.turnCount)
-					leaderboardTable.model.loadLeaderboard(FarkleBackend.getLeaderboard())
-					text = i18n.tr('Roll')
+					startGame()
 				}
 			}
 		}

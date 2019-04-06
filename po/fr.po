@@ -206,3 +206,7 @@ msgstr "Plus de tours"
 #: ../qml/SetupView.qml:100
 msgid "Enable sound effects"
 msgstr "Activer effets sonores"
+
+#: ../qml/DefaultHeader.qml:48
+msgid "Restart game"
+msgstr "Recommencer le jeu"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: farkle.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-05 07:12+0000\n"
+"POT-Creation-Date: 2019-04-06 15:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/AboutView.qml:40
+#: ../qml/AboutView.qml:40 ../qml/build/tmp/AboutView.qml:40
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
 msgstr ""
 
-#: ../qml/AboutView.qml:44
+#: ../qml/AboutView.qml:44 ../qml/build/tmp/AboutView.qml:44
 msgid ""
 "This program is free software: you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation (version 3)."
 msgstr ""
 
-#: ../qml/AboutView.qml:48
+#: ../qml/AboutView.qml:48 ../qml/build/tmp/AboutView.qml:48
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -36,7 +36,7 @@ msgid ""
 "more details."
 msgstr ""
 
-#: ../qml/AboutView.qml:52
+#: ../qml/AboutView.qml:52 ../qml/build/tmp/AboutView.qml:52
 msgid ""
 "For the full license text, visit the <a href='https://github.com/Arc676/"
 "Farkle-Linux'>repository</a> or the <a href='http://www.gnu.org/"
@@ -44,126 +44,133 @@ msgid ""
 msgstr ""
 
 #: ../qml/AboutView.qml:56 ../qml/AboutView.qml:90
+#: ../qml/build/tmp/AboutView.qml:56 ../qml/build/tmp/AboutView.qml:90
 msgid "%1 assets"
 msgstr ""
 
-#: ../qml/AboutView.qml:61
+#: ../qml/AboutView.qml:61 ../qml/build/tmp/AboutView.qml:61
 msgid "Application icon by <a href='http://www.freepik.com'>Freepik</a>"
 msgstr ""
 
-#: ../qml/AboutView.qml:65
+#: ../qml/AboutView.qml:65 ../qml/build/tmp/AboutView.qml:65
 msgid ""
 "<a href='https://freesound.org/people/kiddpark/sounds/201159/'>Bank sound "
 "effect</a> by kiddpark"
 msgstr ""
 
-#: ../qml/AboutView.qml:69
+#: ../qml/AboutView.qml:69 ../qml/build/tmp/AboutView.qml:69
 msgid ""
 "<a href='https://freesound.org/people/grunz/sounds/109662/'>Triple Pair</a> "
 "and <a href='https://freesound.org/people/grunz/sounds/109663/'>Straight</a> "
 "sound effects by grunz"
 msgstr ""
 
-#: ../qml/AboutView.qml:73
+#: ../qml/AboutView.qml:73 ../qml/build/tmp/AboutView.qml:73
 msgid ""
 "<a href='http://creativecommons.org/publicdomain/zero/1.0/'>CC0</a> assets"
 msgstr ""
 
-#: ../qml/AboutView.qml:78
+#: ../qml/AboutView.qml:78 ../qml/build/tmp/AboutView.qml:78
 msgid ""
 "<a href='https://freesound.org/people/nettimato/sounds/353975/'>Dice rolling "
 "sounds</a> by nettimato"
 msgstr ""
 
-#: ../qml/AboutView.qml:82
+#: ../qml/AboutView.qml:82 ../qml/build/tmp/AboutView.qml:82
 msgid ""
 "<a href='https://freesound.org/people/fins/sounds/171673/'>Farkle sound "
 "effect</a> by fins"
 msgstr ""
 
-#: ../qml/AboutView.qml:86
+#: ../qml/AboutView.qml:86 ../qml/build/tmp/AboutView.qml:86
 msgid ""
 "<a href='https://freesound.org/people/KorgMS2000B/sounds/54405/'>Die "
 "selection ticking sound effect</a> by KorgMS2000B"
 msgstr ""
 
-#: ../qml/AboutView.qml:95
+#: ../qml/AboutView.qml:95 ../qml/build/tmp/AboutView.qml:95
 msgid "Dice sprites by Arc676/Alessandro Vinciguerra"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:20 farkle.desktop.in.h:1
+#: ../qml/build/tmp/DefaultHeader.qml:20 ../qml/DefaultHeader.qml:20
+#: farkle.desktop.in.h:1
 msgid "Farkle"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:27
+#: ../qml/build/tmp/DefaultHeader.qml:27 ../qml/DefaultHeader.qml:41
 msgid "About Farkle"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:34
+#: ../qml/build/tmp/DefaultHeader.qml:34 ../qml/DefaultHeader.qml:27
 msgid "Game Settings"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:41 ../qml/RulesView.qml:40
+#: ../qml/build/tmp/DefaultHeader.qml:41 ../qml/build/tmp/RulesView.qml:40
+#: ../qml/DefaultHeader.qml:48 ../qml/RulesView.qml:40
 msgid "Gameplay rules"
 msgstr ""
 
-#: ../qml/GameView.qml:83
+#: ../qml/build/tmp/GameView.qml:83 ../qml/GameView.qml:96
 msgid "Farkle! Tap on any die to pass the turn."
 msgstr ""
 
-#: ../qml/GameView.qml:86
+#: ../qml/build/tmp/GameView.qml:86 ../qml/GameView.qml:99
 msgid "Triple pair!"
 msgstr ""
 
-#: ../qml/GameView.qml:89
+#: ../qml/build/tmp/GameView.qml:89 ../qml/GameView.qml:102
 msgid "Straight!"
 msgstr ""
 
-#: ../qml/GameView.qml:100 ../qml/GameView.qml:102 ../qml/GameView.qml:115
-#: ../qml/GameView.qml:263
+#: ../qml/build/tmp/GameView.qml:100 ../qml/build/tmp/GameView.qml:102
+#: ../qml/build/tmp/GameView.qml:115 ../qml/build/tmp/GameView.qml:263
+#: ../qml/GameView.qml:113 ../qml/GameView.qml:115 ../qml/GameView.qml:128
+#: ../qml/GameView.qml:274
 msgid "Bank"
 msgstr ""
 
-#: ../qml/GameView.qml:117
+#: ../qml/build/tmp/GameView.qml:117 ../qml/GameView.qml:130
 msgid "%1's turn %2 of %3. Score: %4"
 msgstr ""
 
-#: ../qml/GameView.qml:123 ../qml/GameView.qml:144
+#: ../qml/build/tmp/GameView.qml:123 ../qml/build/tmp/GameView.qml:144
+#: ../qml/GameView.qml:136 ../qml/GameView.qml:157
 msgid "No game in progress"
 msgstr ""
 
-#: ../qml/GameView.qml:124 ../qml/GameView.qml:227
+#: ../qml/build/tmp/GameView.qml:124 ../qml/build/tmp/GameView.qml:227
+#: ../qml/GameView.qml:137 ../qml/GameView.qml:240
 msgid "New Game"
 msgstr ""
 
-#: ../qml/GameView.qml:241
+#: ../qml/build/tmp/GameView.qml:241 ../qml/GameView.qml:84
 msgid "Roll"
 msgstr ""
 
-#: ../qml/GameView.qml:249
+#: ../qml/build/tmp/GameView.qml:249 ../qml/GameView.qml:260
 msgid "Confirm selection"
 msgstr ""
 
-#: ../qml/GameView.qml:280
+#: ../qml/build/tmp/GameView.qml:280 ../qml/GameView.qml:291
 msgid "Selections"
 msgstr ""
 
-#: ../qml/GameView.qml:313
+#: ../qml/build/tmp/GameView.qml:313 ../qml/GameView.qml:324
 msgid "Leaderboard"
 msgstr ""
 
-#: ../qml/RulesView.qml:44
+#: ../qml/build/tmp/RulesView.qml:44 ../qml/RulesView.qml:44
 msgid ""
 "Farkle is a dice game in which the objective is to score as many points as "
 "possible. The number of turns is limited to an amount determined before the "
 "game begins."
 msgstr ""
 
-#: ../qml/RulesView.qml:46
+#: ../qml/build/tmp/RulesView.qml:46 ../qml/RulesView.qml:46
 msgid "Players roll dice to score points in the following ways:"
 msgstr ""
 
-#: ../qml/RulesView.qml:48
+#: ../qml/build/tmp/RulesView.qml:48 ../qml/RulesView.qml:48
 msgid ""
 "A 1 is worth 100 points. A 5 is worth 50 points. Three of the same number "
 "are worth 100 times the number, except three 1s which are worth 1000 points "
@@ -184,36 +191,44 @@ msgid ""
 "pair is worth 2000 points. A straight is worth 3000 points."
 msgstr ""
 
-#: ../qml/RulesView.qml:53
+#: ../qml/build/tmp/RulesView.qml:53 ../qml/RulesView.qml:53
 msgid ""
 "For more details and example rolls, please refer to the README in the "
 "repository for this app's backend library: "
 msgstr ""
 
-#: ../qml/SetupView.qml:41 ../qml/SetupView.qml:55 ../qml/SetupView.qml:65
+#: ../qml/build/tmp/SetupView.qml:41 ../qml/build/tmp/SetupView.qml:55
+#: ../qml/build/tmp/SetupView.qml:65 ../qml/SetupView.qml:41
+#: ../qml/SetupView.qml:55 ../qml/SetupView.qml:65
 msgid "Players: "
 msgstr ""
 
-#: ../qml/SetupView.qml:51
+#: ../qml/build/tmp/SetupView.qml:51 ../qml/SetupView.qml:51
 msgid "Fewer players"
 msgstr ""
 
-#: ../qml/SetupView.qml:62
+#: ../qml/build/tmp/SetupView.qml:62 ../qml/SetupView.qml:62
 msgid "More players"
 msgstr ""
 
-#: ../qml/SetupView.qml:72 ../qml/SetupView.qml:86 ../qml/SetupView.qml:96
+#: ../qml/build/tmp/SetupView.qml:72 ../qml/build/tmp/SetupView.qml:86
+#: ../qml/build/tmp/SetupView.qml:96 ../qml/SetupView.qml:72
+#: ../qml/SetupView.qml:86 ../qml/SetupView.qml:96
 msgid "Turns: "
 msgstr ""
 
-#: ../qml/SetupView.qml:82
+#: ../qml/build/tmp/SetupView.qml:82 ../qml/SetupView.qml:82
 msgid "Fewer turns"
 msgstr ""
 
-#: ../qml/SetupView.qml:93
+#: ../qml/build/tmp/SetupView.qml:93 ../qml/SetupView.qml:93
 msgid "More turns"
 msgstr ""
 
-#: ../qml/SetupView.qml:103
+#: ../qml/build/tmp/SetupView.qml:103 ../qml/SetupView.qml:103
 msgid "Enable sound effects"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:34
+msgid "Restart game"
 msgstr ""

@@ -219,3 +219,7 @@ msgstr ""
 #: ../qml/SetupView.qml:100
 msgid "Enable sound effects"
 msgstr "Soundeffekte anschalten"
+
+#: ../qml/DefaultHeader.qml:48
+msgid "Restart game"
+msgstr "Spiel neu starten"

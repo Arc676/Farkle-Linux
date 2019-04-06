@@ -22,13 +22,6 @@ PageHeader {
 	trailingActionBar {
 		actions: [
 			Action {
-				iconName: "info"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("About Farkle")
-
-				onTriggered: pageViewer.push(pageViewer.aboutPage)
-			},
-			Action {
 				iconName: "settings"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("Game Settings")
@@ -36,7 +29,21 @@ PageHeader {
 				onTriggered: pageViewer.push(pageViewer.setupPage)
 			},
 			Action {
-				iconName: "info" // temporary icon name
+				iconName: "reset"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("Restart game")
+
+				onTriggered: gameViewPage.restartGame()
+			},
+			Action {
+				iconName: "info"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("About Farkle")
+
+				onTriggered: pageViewer.push(pageViewer.aboutPage)
+			},
+			Action {
+				iconName: "help"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("Gameplay rules")
 
