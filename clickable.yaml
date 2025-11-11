@@ -1,0 +1,3 @@
+builder: cmake
+kill: qmlscene
+framework: ubuntu-sdk-20.04
