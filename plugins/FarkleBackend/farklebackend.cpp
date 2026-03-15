@@ -40,7 +40,7 @@ void FarkleBackend::startGame(int pCount, int turnLimit) {
 	players = (Player**)malloc(pCount * sizeof(Player*));
 	leaderboard = (Player**)malloc(pCount * sizeof(Player*));
 	for (int i = 0; i < pCount; i++) {
-		char* name = (char*)malloc(10);
+		char* name = (char*)malloc(30);
 		sprintf(name, "Player %d", i + 1);
 		players[i] = createPlayer(name);
 		leaderboard[i] = players[i];
