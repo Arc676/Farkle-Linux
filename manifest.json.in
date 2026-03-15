@@ -1,15 +1,15 @@
 {
-    "name": "farkle.arc676",
-    "description": "A frontend to the Farkle dice game for Ubuntu Touch",
-    "architecture": "@CLICK_ARCH@",
-    "title": "Farkle",
-    "hooks": {
-        "farkle": {
-            "apparmor": "farkle.apparmor",
-            "desktop":  "farkle.desktop"
-        }
-    },
-    "version": "0.3",
-    "maintainer": "Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>",
-    "framework" : "ubuntu-sdk-16.04"
+  "name": "farkle.arc676",
+  "description": "A frontend to the Farkle dice game for Ubuntu Touch",
+  "architecture": "@CLICK_ARCH@",
+  "title": "Farkle",
+  "hooks": {
+    "farkle": {
+      "apparmor": "farkle.apparmor",
+      "desktop": "farkle.desktop"
+    }
+  },
+  "version": "0.3",
+  "maintainer": "Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>",
+  "framework": "@CLICK_FRAMEWORK@"
 }
