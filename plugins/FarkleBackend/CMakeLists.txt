@@ -16,7 +16,12 @@ set(CMAKE_AUTOMOC ON)
 include_directories(${CMAKE_SOURCE_DIR}/plugins/FarkleBackend/lib)
 link_directories(${CMAKE_SOURCE_DIR}/plugins/FarkleBackend/lib)
 
+add_custom_target(BuildBackend ALL
+  COMMAND make -C ${CMAKE_SOURCE_DIR}/plugins/FarkleBackend/lib CC=${CMAKE_C_COMPILER} FPIC=1 clean lib
+)
+
 add_library(${PLUGIN} MODULE ${SRC})
+add_dependencies(${PLUGIN} BuildBackend)
 target_link_libraries(${PLUGIN} ${CMAKE_SOURCE_DIR}/plugins/FarkleBackend/lib/libfarkle.a)
 set_target_properties(${PLUGIN} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PLUGIN})
 qt5_use_modules(${PLUGIN} Qml Quick DBus)
